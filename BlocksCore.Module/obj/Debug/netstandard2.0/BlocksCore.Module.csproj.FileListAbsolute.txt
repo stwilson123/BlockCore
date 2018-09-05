@@ -1,9 +1,0 @@
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\bin\Debug\netstandard2.0\BlocksCore.Module.deps.json
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\bin\Debug\netstandard2.0\BlocksCore.Module.dll
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\bin\Debug\netstandard2.0\BlocksCore.Module.pdb
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.csprojAssemblyReference.cache
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.csproj.CoreCompileInputs.cache
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.AssemblyInfoInputs.cache
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.AssemblyInfo.cs
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.dll
-D:\Blocks129\Third\BlocksCore\BlocksCore.Module\obj\Debug\netstandard2.0\BlocksCore.Module.pdb
