@@ -1,0 +1,9 @@
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.deps.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.csprojAssemblyReference.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.csproj.CoreCompileInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.AssemblyInfoInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.AssemblyInfo.cs
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.SyntacticAbstractions\obj\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.pdb

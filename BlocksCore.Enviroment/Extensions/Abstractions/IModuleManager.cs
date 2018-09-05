@@ -6,6 +6,8 @@ namespace BlocksCore.Enviroment.Extensions.Abstractions
     public interface IModuleManager
     {
         IModuleInfo GetModuleInfo(string Id);
+        
+        IEnumerable<IModuleInfo> GetModuleInfos();
 
         IEnumerable<IFeatureInfo> GetFeatures();
     }

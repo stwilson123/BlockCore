@@ -4,4 +4,9 @@
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BlocksCore.Enviroment\BlocksCore.Enviroment.csproj" />
+      <ProjectReference Include="..\BlocksCore.Module\BlocksCore.Module.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -10,3 +10,5 @@ D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\obj\Debug\netstandard2.0\Blo
 D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\obj\Debug\netstandard2.0\BlocksCore.Enviroment.csproj.CopyComplete
 D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\obj\Debug\netstandard2.0\BlocksCore.Enviroment.dll
 D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\obj\Debug\netstandard2.0\BlocksCore.Enviroment.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Enviroment\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.pdb

@@ -7,3 +7,10 @@ D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.
 D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.AssemblyInfo.cs
 D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.dll
 D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Enviroment.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Module.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Enviroment.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Module.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.csproj.CopyComplete
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.SyntacticAbstractions.pdb

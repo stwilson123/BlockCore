@@ -14,7 +14,14 @@
     ],
     "frameworks": {
       "netstandard2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\Blocks129\\Third\\BlocksCore\\BlocksCore.Enviroment\\BlocksCore.Enviroment.csproj": {
+            "projectPath": "D:\\Blocks129\\Third\\BlocksCore\\BlocksCore.Enviroment\\BlocksCore.Enviroment.csproj"
+          },
+          "D:\\Blocks129\\Third\\BlocksCore\\BlocksCore.Module\\BlocksCore.Module.csproj": {
+            "projectPath": "D:\\Blocks129\\Third\\BlocksCore\\BlocksCore.Module\\BlocksCore.Module.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
