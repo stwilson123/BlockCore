@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using BlocksCore.Module.Abstractions.ModuleDescription;
 using Microsoft.AspNetCore.Hosting;
 
 namespace BlocksCore.Enviroment
@@ -6,11 +9,16 @@ namespace BlocksCore.Enviroment
     public class ApplicationEnviroment : IApplicationEnviroment
     {
         private IHostingEnvironment _hostingEnvironment;
+
+        private Assembly Assembly;
         public ApplicationEnviroment(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
-            
-            
+
+            Assembly = Assembly.Load(new AssemblyName(ApplicationName));
+
+            ModuleDescriptions = Assembly.GetCustomAttributes<ModuleAttribute>();
+
         }
         public string EnvironmentName
         {
@@ -28,6 +36,6 @@ namespace BlocksCore.Enviroment
             }
         }
 
-        public IEnumerable<string> ModuleNames { get; }
+        public IEnumerable<ModuleAttribute> ModuleDescriptions { get; }
     }
 }

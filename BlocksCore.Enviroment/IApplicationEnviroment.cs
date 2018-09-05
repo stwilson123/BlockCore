@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlocksCore.Module.Abstractions.ModuleDescription;
+using System;
 using System.Collections.Generic;
 
 namespace BlocksCore.Enviroment
@@ -9,6 +10,6 @@ namespace BlocksCore.Enviroment
       
         string ApplicationName { get; }
         
-        IEnumerable<string> ModuleNames { get; }
+        IEnumerable<ModuleAttribute> ModuleDescriptions { get; }
     }
 }
