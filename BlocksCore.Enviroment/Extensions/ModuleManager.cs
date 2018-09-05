@@ -10,6 +10,7 @@ namespace BlocksCore.Enviroment.Extensions
         public IModuleInfo GetModuleInfo(string Id)
         {
             throw new System.NotImplementedException();
+
         }
 
         public IEnumerable<IFeatureInfo> GetFeatures()
