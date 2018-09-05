@@ -1,0 +1,14 @@
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\BlocksCore.Test.deps.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\BlocksCore.Test.runtimeconfig.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\BlocksCore.Test.runtimeconfig.dev.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\BlocksCore.Test.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\bin\Debug\netcoreapp2.1\BlocksCore.Test.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.csprojAssemblyReference.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.csproj.CoreCompileInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.AssemblyInfoInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.AssemblyInfo.cs
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Test\obj\Debug\netcoreapp2.1\BlocksCore.Test.pdb

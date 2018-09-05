@@ -1,0 +1,9 @@
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Appliction.Face.deps.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Appliction.Face.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\bin\Debug\netstandard2.0\BlocksCore.Appliction.Face.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.csprojAssemblyReference.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.csproj.CoreCompileInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.AssemblyInfoInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.AssemblyInfo.cs
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Appliction.Face\obj\Debug\netstandard2.0\BlocksCore.Appliction.Face.pdb

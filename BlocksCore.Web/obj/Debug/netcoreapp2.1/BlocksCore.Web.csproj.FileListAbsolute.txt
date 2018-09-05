@@ -1,0 +1,14 @@
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\bin\Debug\netcoreapp2.1\BlocksCore.Web.deps.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\bin\Debug\netcoreapp2.1\BlocksCore.Web.runtimeconfig.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\bin\Debug\netcoreapp2.1\BlocksCore.Web.runtimeconfig.dev.json
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\bin\Debug\netcoreapp2.1\BlocksCore.Web.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\bin\Debug\netcoreapp2.1\BlocksCore.Web.pdb
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.csprojAssemblyReference.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.csproj.CoreCompileInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.RazorAssemblyInfo.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.RazorAssemblyInfo.cs
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.AssemblyInfoInputs.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.AssemblyInfo.cs
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.RazorTargetAssemblyInfo.cache
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.dll
+D:\Blocks129\Third\BlocksCore\BlocksCore.Web\obj\Debug\netcoreapp2.1\BlocksCore.Web.pdb
