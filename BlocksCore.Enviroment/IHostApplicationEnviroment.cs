@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 namespace BlocksCore.Enviroment
 {
-    public interface IApplicationEnviroment
+    public interface IHostApplicationEnviroment
     {
         string EnvironmentName { get;  }
       
         string ApplicationName { get; }
         
-        IEnumerable<ModuleAttribute> ModuleDescriptions { get; }
+        IEnumerable<string> ModuleNames { get; }
+        
+         
     }
 }

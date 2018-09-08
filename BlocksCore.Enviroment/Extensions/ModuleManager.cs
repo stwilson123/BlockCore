@@ -1,15 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlocksCore.Enviroment.Extensions.Abstractions;
 using BlocksCore.Enviroment.Extensions.Abstractions.Features;
 using BlocksCore.Enviroment.Extensions.Features;
+using BlocksCore.Module.Abstractions.ModuleDescription;
 
 namespace BlocksCore.Enviroment.Extensions
 {
     public class ModuleManager : IModuleManager
     {
-        private IApplicationEnviroment _applicationEnviroment;
+        private readonly IHostApplicationEnviroment _hostApplicationEnviroment;
 
         private IDictionary<string, ModuleEntry> _modules ;
 
@@ -18,10 +20,11 @@ namespace BlocksCore.Enviroment.Extensions
         
         private static object initializationLock = new object();
         private bool _isInitialized = false;
-        public ModuleManager(IApplicationEnviroment applicationEnviroment)
+        public ModuleManager(IHostApplicationEnviroment hostApplicationEnviroment)
         {
-            _applicationEnviroment = applicationEnviroment;
-       
+            _hostApplicationEnviroment = hostApplicationEnviroment;
+            _modules = new ConcurrentDictionary<string, ModuleEntry>();
+            _features = new ConcurrentDictionary<string, FeatureEntry>();
         }
 
         public IModuleInfo GetModuleInfo(string Id)
@@ -59,12 +62,22 @@ namespace BlocksCore.Enviroment.Extensions
                 if (_isInitialized)
                     return;
 
-               //  Parallel.ForEach()
+               
+                Parallel.ForEach(_hostApplicationEnviroment.ModuleNames,
+                    new ParallelOptions() {MaxDegreeOfParallelism = 8}, ModulesLoad);
                 
                 
                 
                 _isInitialized = true;
             }
         }
+
+        private void ModulesLoad(string name)
+        {
+            var module = ModuleEntry.Create(name, name == _hostApplicationEnviroment.ApplicationName);
+            _modules.Add(name, module);
+        }
+        
+        
     }
 }

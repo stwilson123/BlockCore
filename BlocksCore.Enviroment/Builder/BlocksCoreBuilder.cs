@@ -7,7 +7,7 @@ namespace BlocksCore.Enviroment.Builder
 {
     public class BlocksCoreBuilder
     {
-        public IServiceCollection ApplicationServices { get; }
+        private IServiceCollection ApplicationServices { get; }
         public BlocksCoreBuilder(IServiceCollection services)
         {
             ApplicationServices = services;

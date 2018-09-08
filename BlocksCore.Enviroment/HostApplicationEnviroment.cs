@@ -6,18 +6,18 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace BlocksCore.Enviroment
 {
-    public class ApplicationEnviroment : IApplicationEnviroment
+    public class HostApplicationEnviroment : IHostApplicationEnviroment
     {
         private IHostingEnvironment _hostingEnvironment;
 
         private Assembly Assembly;
-        public ApplicationEnviroment(IHostingEnvironment hostingEnvironment)
+        public HostApplicationEnviroment(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
 
             Assembly = Assembly.Load(new AssemblyName(ApplicationName));
 
-            ModuleDescriptions = Assembly.GetCustomAttributes<ModuleAttribute>();
+            ModuleNames = Assembly.GetCustomAttributes<ModuleAttribute>().Select(m => m.Name).ToList();
 
         }
         public string EnvironmentName
@@ -36,6 +36,6 @@ namespace BlocksCore.Enviroment
             }
         }
 
-        public IEnumerable<ModuleAttribute> ModuleDescriptions { get; }
+        public IEnumerable<string> ModuleNames { get; }
     }
 }
