@@ -19,7 +19,7 @@ namespace BlocksCore.Test.Stubs
             
            var assembly = Assembly.Load(new AssemblyName(ApplicationName));
 
-            ModuleNames = assembly.GetCustomAttributes<ModuleAttribute>().Select(m => m.Name).ToList();
+            ModuleNames = assembly.GetCustomAttributes<ModuleRegisterAttribute>().Select(m => m.Name).ToList();
         }
     }
 }
