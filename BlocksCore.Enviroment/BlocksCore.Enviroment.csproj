@@ -11,6 +11,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlocksCore.Exception\BlocksCore.Exception.csproj" />
     <ProjectReference Include="..\BlocksCore.Module\BlocksCore.Module.csproj" />
     <ProjectReference Include="..\BlocksCore.SyntacticAbstractions\BlocksCore.SyntacticAbstractions.csproj" />
   </ItemGroup>

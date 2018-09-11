@@ -8,7 +8,7 @@ namespace BlocksCore.Enviroment.Extensions.Features
     {
         public string Id { get; }
         public string Name { get; }
-        public int Priority { get; }
+        public string Priority { get; }
         public string Description { get; }
         public IModuleInfo ModuleInfo { get; }
         public string[] Dependencies { get; }

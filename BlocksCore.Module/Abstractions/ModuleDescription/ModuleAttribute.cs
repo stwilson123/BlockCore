@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BlocksCore.Module.Abstractions.ModuleDescription
 {
@@ -20,6 +21,6 @@ namespace BlocksCore.Module.Abstractions.ModuleDescription
         
         public string Version { get; set; } = "0.0";
         
-        public List<FeatureAttribute> Features { get; } = new List<FeatureAttribute>();
+       // public IEnumerable<FeatureAttribute> Features { get; } = Enumerable.Empty<FeatureAttribute>();
     }
 }

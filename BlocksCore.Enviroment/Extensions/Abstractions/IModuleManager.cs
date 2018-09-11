@@ -10,5 +10,11 @@ namespace BlocksCore.Enviroment.Extensions.Abstractions
         IEnumerable<IModuleInfo> GetModuleInfos();
 
         IEnumerable<IFeatureInfo> GetFeatures();
+
+        IFeatureInfo GetFeature(string featureId);
+
+
+        IEnumerable<IFeatureInfo> GetDependentFeatures(string featureId);
+
     }
 }

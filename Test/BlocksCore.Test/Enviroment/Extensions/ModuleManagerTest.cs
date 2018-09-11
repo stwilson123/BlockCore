@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using BlocksCore.Enviroment;
 using BlocksCore.Enviroment.Extensions;
 using BlocksCore.Enviroment.Extensions.Abstractions;
@@ -15,14 +17,35 @@ namespace BlocksCore.Test.Enviroment.Extensions
         private IModuleManager _moduleManager;
         public ModuleManagerTest()
         {
-           _moduleManager = new ModuleManager(_hostApplicationEnviroment);
+           _moduleManager = new ModuleManager(_hostApplicationEnviroment,new FeatureInspect());
         }
         
         [Fact]
-        public void ShouldReturnModuleAndFeatures()
+        public void StubObjectShouldReturnModuleAndFeatures()
+        {
+            Assert.Contains(_moduleManager.GetModuleInfos(),t => string.Equals(t.Name,"TestModule",StringComparison.Ordinal));
+
+            Assert.Contains(_moduleManager.GetFeatures(), t => string.Equals(t.Id, "TestModule.Feature1", StringComparison.Ordinal));
+        }
+
+
+        [Fact]
+        public void ShouldReturnFeatureDenpendenciesWithAppointOrder()
         {
 
-            _moduleManager.GetModuleInfos();
+            var featureDenpendcies = _moduleManager.GetDependentFeatures("TestModule.Feature3");
+
+            Assert.Equal(3, featureDenpendcies.Count());
+            Assert.Equal("TestModule.Feature1", featureDenpendcies.ElementAt(0).Id);
+            Assert.Equal("TestModule.Feature2", featureDenpendcies.ElementAt(1).Id);
+            Assert.Equal("TestModule.Feature3", featureDenpendcies.ElementAt(2).Id);
+
+
+            featureDenpendcies = _moduleManager.GetDependentFeatures("TestModule.Feature2");
+
+            Assert.Equal(2, featureDenpendcies.Count());
+            Assert.Equal("TestModule.Feature1", featureDenpendcies.ElementAt(0).Id);
+            Assert.Equal("TestModule.Feature2", featureDenpendcies.ElementAt(1).Id);
         }
     }
 

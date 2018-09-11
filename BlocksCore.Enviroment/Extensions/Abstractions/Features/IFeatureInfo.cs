@@ -4,7 +4,7 @@
     {
         string Id { get; }
         string Name { get; }
-        int Priority { get; }
+        string Priority { get; }
         string Description { get; }
         IModuleInfo ModuleInfo  { get; }
         string[] Dependencies { get; }

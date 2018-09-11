@@ -2,17 +2,12 @@
 
 namespace BlocksCore.Module.Abstractions.ModuleDescription
 {
-    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true, Inherited = false)]
     public class FeatureAttribute : Attribute
     {
 
-        /// <summary>
-        /// Folder name under virtual path base
-        /// </summary>
-        public string Id { get; internal set; }
+        public string Id { get; set; }
 
-  
-     
         public string Name { get; set; }
         
         public string Description { get; set; }

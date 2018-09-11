@@ -32,18 +32,23 @@ namespace BlocksCore.Enviroment.Extensions
             var moduleAssembly = Assembly.Load(name);
             var featureAttributes = moduleAssembly.GetCustomAttributes<FeatureAttribute>();
             var moduleAttribute = featureAttributes.FirstOrDefault(t => t is ModuleAttribute) as ModuleAttribute;
-            featureAttributes = featureAttributes.Where(t => !(t is ModuleAttribute));
+            featureAttributes = featureAttributes.Where(t => !(t is ModuleAttribute)).ToList();
             
             var moduleInfo = new ModuleInfo(moduleAttribute);
+            moduleInfo.Features = moduleInfo.Features.Concat(featureAttributes.Select(f => new FeatureInfo(f))).ToList();
+            
+
             var module = new ModuleEntry()
             {
                 ModuleInfo = moduleInfo,
-                Assembly =  moduleAssembly,
+                Assembly = moduleAssembly,
                 ExportedTypes = moduleAssembly.ExportedTypes
                 //Maybe Combine with other Module 
-               // Features = featureAttributes.Select(f => new FeatureEntry(){ ExportedTypes = })
+                // Features = featureAttributes.Select(f => new FeatureEntry(){ ExportedTypes = })
             };
-            
+           // moduleAttribute.Features(featureAttributes);
+
+
             return module;
                 
         }
