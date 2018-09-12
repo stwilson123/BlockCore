@@ -73,7 +73,7 @@ namespace BlocksCore.Enviroment.Extensions
                 Parallel.ForEach(_hostApplicationEnviroment.ModuleNames,
                     new ParallelOptions() {MaxDegreeOfParallelism = 8}, ModulesLoad);
                 
-                _featureInspect.IsConformityInitalization(GetModuleInfos());
+                _featureInspect.IsConformityInitalization(_modules.Select(m => m.Value.ModuleInfo).ToList());
                 var typeFeatures = _modules.SelectMany(m =>
                 {
                     var firstFeatureId = m.Value.ModuleInfo.Features?.FirstOrDefault()?.Id;
