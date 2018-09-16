@@ -13,4 +13,5 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2C8EC26_002DB090_002D4DD8_002D85FF_002DC79AB3EDAD7D_002Fd_003AExtensions_002Ff_003AModuleEntry_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2C8EC26_002DB090_002D4DD8_002D85FF_002DC79AB3EDAD7D_002Fd_003AExtensions_002Ff_003AModuleInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2C8EC26_002DB090_002D4DD8_002D85FF_002DC79AB3EDAD7D_002Fd_003AExtensions_002Ff_003AModuleManager_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2C8EC26_002DB090_002D4DD8_002D85FF_002DC79AB3EDAD7D_002Ff_003AClass1_002Ecs/@EntryIndexedValue">ForceIncluded</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2C8EC26_002DB090_002D4DD8_002D85FF_002DC79AB3EDAD7D_002Ff_003AClass1_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=d8e1d59e_002Db480_002D4887_002Da3c5_002D7fb26f300c72_0023BlocksCore_002EDependencyInject/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
