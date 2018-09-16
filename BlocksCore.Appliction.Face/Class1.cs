@@ -1,8 +1,24 @@
 ﻿using System;
+using BlocksCore.Module.Abstractions.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BlocksCore.Appliction.Face
 {
-    public class Class1
-    {
+    public static class ServiceExtensions
+    { 
+        public static void AddBlocksCore(this IServiceCollection services)
+        {
+              AddBlocksCore(services, null);
+        }
+
+        public static void AddBlocksCore(this IServiceCollection services,Action<BlocksCoreBuilder> configAction)
+        {
+
+            var builder = BlocksCoreFactory.AddBlocksCoreBuilder(services);
+
+            
+            configAction?.Invoke(builder);
+        }
+ 
     }
 }
