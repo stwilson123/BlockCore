@@ -1,0 +1,21 @@
+{
+  "name": "BlocksCore.Resources",
+  "homepage": "https://github.com/stwilson123/BlockCore",
+  "authors": [
+    "stwilson123 <499502394@qq.com>"
+  ],
+  "description": "configfile",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "element-ui": "^2.4.8"
+  }
+}
