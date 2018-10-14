@@ -9,4 +9,8 @@
       <ProjectReference Include="..\..\BlocksCore.Module\BlocksCore.Module.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="framework\" />
+    </ItemGroup>
+
 </Project>
