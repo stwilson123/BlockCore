@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Module", "BlocksCore.Module\BlocksCore.Module.csproj", "{B3521A88-6565-4C87-AF4A-8F3F5C9820B7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Web", "BlocksCore.Web\BlocksCore.Web.csproj", "{2D3E372A-637C-4192-9EB3-19F89A294B7F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlocksCore", "BlocksCore", "{2B0B3888-FF8C-4385-A693-23251386F3BE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Enviroment", "BlocksCore.Enviroment\BlocksCore.Enviroment.csproj", "{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlockCore", "BlockCore", "{2B0B3888-FF8C-4385-A693-23251386F3BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E071A04F-7DC9-44C3-BA89-ABC50DF08D39}"
 EndProject
@@ -35,9 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Exception", "Blo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3A7607EE-852C-4254-A04D-F4042F000AF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlocksCore.ResourcesManagement", "BlocksCore.ResourcesManagement\BlocksCore.ResourcesManagement.csproj", "{DD383408-7C52-43A6-934B-814EE7D99976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.ResourcesManagement", "BlocksCore.ResourcesManagement\BlocksCore.ResourcesManagement.csproj", "{DD383408-7C52-43A6-934B-814EE7D99976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlocksCore.Resources", "Modules\BlocksCore.Resources\BlocksCore.Resources.csproj", "{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Resources", "Modules\BlocksCore.Resources\BlocksCore.Resources.csproj", "{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlocksCore.Abstractions", "BlocksCore.Abstractions\BlocksCore.Abstractions.csproj", "{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlocksCore", "BlocksCore\BlocksCore.csproj", "{A84533ED-C75E-427E-8135-F5834875C45E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,18 +45,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3521A88-6565-4C87-AF4A-8F3F5C9820B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3521A88-6565-4C87-AF4A-8F3F5C9820B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3521A88-6565-4C87-AF4A-8F3F5C9820B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3521A88-6565-4C87-AF4A-8F3F5C9820B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D3E372A-637C-4192-9EB3-19F89A294B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D3E372A-637C-4192-9EB3-19F89A294B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3E372A-637C-4192-9EB3-19F89A294B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D3E372A-637C-4192-9EB3-19F89A294B7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35412F76-529C-4791-8ACF-3CC3BA8E86F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35412F76-529C-4791-8ACF-3CC3BA8E86F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35412F76-529C-4791-8ACF-3CC3BA8E86F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -93,13 +85,19 @@ Global
 		{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84533ED-C75E-427E-8135-F5834875C45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84533ED-C75E-427E-8135-F5834875C45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84533ED-C75E-427E-8135-F5834875C45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84533ED-C75E-427E-8135-F5834875C45E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B3521A88-6565-4C87-AF4A-8F3F5C9820B7} = {7516A50E-BE14-4B62-A8C4-5BBD113816DE}
-		{E2C8EC26-B090-4DD8-85FF-C79AB3EDAD7D} = {7516A50E-BE14-4B62-A8C4-5BBD113816DE}
 		{367870C3-D2C8-4A9A-9326-47EF9881CB86} = {2B0B3888-FF8C-4385-A693-23251386F3BE}
 		{35412F76-529C-4791-8ACF-3CC3BA8E86F9} = {367870C3-D2C8-4A9A-9326-47EF9881CB86}
 		{9858A4E6-326C-42D5-967A-D82083327C66} = {E071A04F-7DC9-44C3-BA89-ABC50DF08D39}
@@ -112,6 +110,8 @@ Global
 		{3B12C8E1-D8E7-4DE8-BE0B-99223E7FA557} = {2B0B3888-FF8C-4385-A693-23251386F3BE}
 		{DD383408-7C52-43A6-934B-814EE7D99976} = {2B0B3888-FF8C-4385-A693-23251386F3BE}
 		{9668682E-ACF6-420D-A6C1-4C3D4C6FEB92} = {3A7607EE-852C-4254-A04D-F4042F000AF7}
+		{DC5DFC9C-72D8-4899-B4AF-CA0207842FD7} = {7516A50E-BE14-4B62-A8C4-5BBD113816DE}
+		{A84533ED-C75E-427E-8135-F5834875C45E} = {7516A50E-BE14-4B62-A8C4-5BBD113816DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEFB9ABF-D7CC-4D42-BC6F-36EA8DA8A085}

@@ -1,7 +1,6 @@
-using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlocksCore.Module.Startup
+namespace BlocksCore.Abstractions.Modules.Startup
 {
     public interface IModuleStartup
     {

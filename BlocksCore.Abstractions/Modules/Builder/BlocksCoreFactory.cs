@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlocksCore.Module.Abstractions.Builder
+namespace BlocksCore.Abstractions.Modules.Builder
 {
     public class BlocksCoreFactory
     {

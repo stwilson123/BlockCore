@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using BlocksCore.Enviroment;
-using BlocksCore.Module.Abstractions.ModuleDescription;
+using BlocksCore.Abstractions;
+using BlocksCore.Abstractions.Modules.ModuleDescription;
 
 namespace BlocksCore.Test.Stubs
 {

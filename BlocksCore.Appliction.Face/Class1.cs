@@ -1,5 +1,5 @@
 ﻿using System;
-using BlocksCore.Module.Abstractions.Builder;
+using BlocksCore.Abstractions.Modules.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BlocksCore.Appliction.Face

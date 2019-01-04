@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using BlocksCore.Enviroment;
-using BlocksCore.Enviroment.Extensions;
-using BlocksCore.Enviroment.Extensions.Abstractions;
-using BlocksCore.Module.Abstractions.ModuleDescription;
+using BlocksCore.Abstractions;
+using BlocksCore.Abstractions.Extensions;
+using BlocksCore.Extensions;
 using BlocksCore.Test.Stubs;
 using Xunit;
 using BlocksCore.SyntacticAbstractions.NullObject;

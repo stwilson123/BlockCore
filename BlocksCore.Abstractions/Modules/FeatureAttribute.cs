@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlocksCore.Module.Abstractions
+namespace BlocksCore.Abstractions.Modules
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class FeatureAttribute : Attribute

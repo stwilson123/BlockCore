@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using BlocksCore.Enviroment.Configuration.Abstractions;
+﻿using BlocksCore.Abstractions.Configuration;
 using Microsoft.Extensions.Configuration;
 
-namespace BlocksCore.Enviroment.Configuration
+namespace BlocksCore.Configuration
 {
     public class AppConfigAccessor : IAppConfigAccessor
     {

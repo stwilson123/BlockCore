@@ -1,4 +1,4 @@
-using BlocksCore.Module.Abstractions.ModuleDescription;
+using BlocksCore.Abstractions.Modules.ModuleDescription;
 
 [assembly: Module(Name = "TestModule",
     Author = "BlocksAuthor",

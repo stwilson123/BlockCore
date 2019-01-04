@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlocksCore.Module.Startup
+namespace BlocksCore.Abstractions.Modules.Startup
 {
     public abstract class ModuleStartup : IModuleStartup
     {

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace BlocksCore.Module.Abstractions.ModuleDescription
+namespace BlocksCore.Abstractions.Modules.ModuleDescription
 {
     /// <summary>
     /// Define a Module Which is nesscessed.  

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using BlocksCore.Module.Startup;
+using BlocksCore.Abstractions.Modules.Startup;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlocksCore.Module.Abstractions.Builder
+namespace BlocksCore.Abstractions.Modules.Builder
 {
     public class BlocksCoreBuilder
     {

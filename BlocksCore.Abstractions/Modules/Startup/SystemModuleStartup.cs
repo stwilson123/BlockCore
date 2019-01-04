@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlocksCore.Module.Startup
+namespace BlocksCore.Abstractions.Modules.Startup
 {
     internal class SystemModuleStartup : ModuleStartup
     {

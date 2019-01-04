@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BlocksCore.Enviroment.Extensions.Abstractions.Features;
+using BlocksCore.Abstractions.Extensions.Features;
 
-namespace BlocksCore.Enviroment.Extensions.Abstractions
+namespace BlocksCore.Abstractions.Extensions
 {
     public interface IModuleManager
     {

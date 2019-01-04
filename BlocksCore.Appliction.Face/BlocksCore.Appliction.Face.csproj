@@ -1,12 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BlocksCore.Enviroment\BlocksCore.Enviroment.csproj" />
-      <ProjectReference Include="..\BlocksCore.Module\BlocksCore.Module.csproj" />
+      <ProjectReference Include="..\BlocksCore\BlocksCore.csproj" />
     </ItemGroup>
 
 </Project>

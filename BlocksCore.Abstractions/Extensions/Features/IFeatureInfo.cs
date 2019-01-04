@@ -1,4 +1,4 @@
-﻿namespace BlocksCore.Enviroment.Extensions.Abstractions.Features
+﻿namespace BlocksCore.Abstractions.Extensions.Features
 {
     public interface IFeatureInfo
     {

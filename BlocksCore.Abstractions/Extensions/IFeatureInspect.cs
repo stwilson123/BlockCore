@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BlocksCore.Enviroment.Extensions.Abstractions
+namespace BlocksCore.Abstractions.Extensions
 {
     public interface IFeatureInspect
     {
