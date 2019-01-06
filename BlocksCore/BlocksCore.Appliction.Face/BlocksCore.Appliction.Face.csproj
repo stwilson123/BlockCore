@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Abstractions\BlocksCore.Loader.Abstractions.csproj" />
+      <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Infrastructure\BlocksCore.Loader.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader\BlocksCore.Loader.csproj" />
+      <ProjectReference Include="..\BlocksCore.ResourcesManagement\BlocksCore.ResourcesManagement.csproj" />
+    </ItemGroup>
+
+</Project>

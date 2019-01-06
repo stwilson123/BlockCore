@@ -1,4 +1,5 @@
-using BlocksCore.Abstractions.Modules.ModuleDescription;
+
+using BlocksCore.Loader.Abstractions.Modules.Manifest;
 
 [assembly: Module(Name = "Resources",
     Author = "BlocksAuthor",

@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   
-  <Import Project="..\..\BlocksCore.Module.Face\BlocksCore.Module.Face.targets" />
+  <Import Project="..\..\BlocksCore\BlocksCore.Module.Face\BlocksCore.Module.Face.targets" />
 
   <PropertyGroup>
     <DebugType>embedded</DebugType>

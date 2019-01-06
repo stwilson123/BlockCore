@@ -13,7 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\BlocksCore.Appliction.Face\BlocksCore.Appliction.Face.csproj" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Appliction.Face\BlocksCore.Appliction.Face.csproj" />
+      <ProjectReference Include="..\TestModules\TestModule\ModuleSample.csproj" />
     </ItemGroup>
-    <Import Project="..\..\BlocksCore.Appliction.Face\BlocksCore.Application.Face.targets" />
+    <Import Project="..\..\BlocksCore\BlocksCore.Appliction.Face\BlocksCore.Application.Face.targets" />
 </Project>

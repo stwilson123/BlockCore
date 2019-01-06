@@ -5,12 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\BlocksCore.Abstractions\BlocksCore.Abstractions.csproj" />
-      <ProjectReference Include="..\..\BlocksCore.Module.Face\BlocksCore.Module.Face.csproj" />
+      <Folder Include="framework\" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="framework\" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Module.Face\BlocksCore.Module.Face.csproj" />
     </ItemGroup>
 
 </Project>
