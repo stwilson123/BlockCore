@@ -93,6 +93,7 @@ namespace OrchardCore.Tests.Extensions
                 .Where(e => e.Manifest.ModuleInfo.Category == "Test");
 
             Assert.Equal(1, extensions.Count());
+            Assert.Equal(1, extensions.Count());
         }
 
         [Fact]

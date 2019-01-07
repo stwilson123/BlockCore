@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="..\BlocksCore.Build\BlocksCore.Commons.props" />
+  <Import Project="..\BlocksCore\BlocksCore.Module.Face\BlocksCore.Module.Face.props" />
+  
+  <PropertyGroup>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+
+</Project>

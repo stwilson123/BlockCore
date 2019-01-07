@@ -6,6 +6,4 @@ using BlocksCore.Loader.Abstractions.Modules.Manifest;
     Version = "1.0.0.0"
 )]
 
-[assembly: Feature(Id = "Resources"
-    
-)]
+ 

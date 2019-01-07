@@ -11,18 +11,47 @@
             <!--<ResolvedFileToPublish Include="@(RazorPagesFiles)" RelativePath="%(RazorPagesFiles.Identity)" />-->
         <!--</ItemGroup>-->
     <!--</Target>-->
+  <Target Name="EmbeddModuleAssets" AfterTargets="AfterResolveReferences">
+    <RemoveDuplicates Inputs="@(EmbeddedResource)">
+      <Output TaskParameter="Filtered" ItemName="ModuleAssetFiles"/>
+    </RemoveDuplicates>
 
+    <ItemGroup>
+      <ModuleAssets
+              Include="Areas\$(MSBuildProjectName)\%(ModuleAssetFiles.RelativeDir)%(Filename)%(Extension)|%(ModuleAssetFiles.FullPath)"
+              Condition="'%(ModuleAssetFiles.Link)' == '' and '%(ModuleAssetFiles.Filename)' != ''"/>
+
+      <ModuleAssets
+              Include="Areas\$(MSBuildProjectName)\%(ModuleAssetFiles.Link)|%(ModuleAssetFiles.FullPath)"
+              Condition="'%(ModuleAssetFiles.Link)' != '' and '%(ModuleAssetFiles.Filename)' != ''" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="@(EmbeddedResource)" />
+      <EmbeddedResource Include="@(ModuleAssetFiles)" />
+      <EmbeddedResource Update="@(EmbeddedResource)" Condition="'%(EmbeddedResource.Link)' == '' and '%(Extension)' != '.resx'">
+        <LogicalName>$([System.String]::new('$(MSBuildProjectName).%(RelativeDir)%(FileName)%(Extension)').Replace('\', '>').Replace('/', '>'))</LogicalName>
+      </EmbeddedResource>
+      <EmbeddedResource Update="@(EmbeddedResource)" Condition="'%(EmbeddedResource.Link)' != '' and '%(Extension)' != '.resx'">
+        <LogicalName>$([System.String]::new('$(MSBuildProjectName).%(EmbeddedResource.Link)').Replace('\', '>').Replace('/', '>'))</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AssemblyAttribute Include="BlocksCore.Loader.Abstractions.Modules.Manifest.ModuleMarkerAttribute">
+        <_Parameter1>$(MSBuildProjectName)</_Parameter1>
+        <_Parameter2>$(ModuleType)</_Parameter2>
+      </AssemblyAttribute>
+      <AssemblyAttribute Include="BlocksCore.Loader.Abstractions.Modules.Manifest.ModuleAssetAttribute">
+        <_Parameter1>%(ModuleAssets.Identity)</_Parameter1>
+      </AssemblyAttribute>
+    </ItemGroup>
+  </Target>
   <Target Name="GetModuleProject" Returns="@(ModuleProject)">
     <ItemGroup>
       <ModuleProject Include="$(MSBuildProjectFullPath)" />
     </ItemGroup>
   </Target>
 
-  <Target Name="BeforeBuild">
-    <MakeTextFile Contents="TODO HOW DO I GRAB MARKED FILES?" />
-  </Target>
-
-  <Target Name="EmitCustomMessage" AfterTargets="Build">
-    <Message Importance="High" Text="The solution has completed the Build target" />
-  </Target>
+ 
 </Project>

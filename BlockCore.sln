@@ -57,6 +57,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Loader.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocksCore.Loader.Infrastructure.Abstractions", "ModuleLoaderCore\BlocksCore.Loader.Infrastructure.Abstractions\BlocksCore.Loader.Infrastructure.Abstractions.csproj", "{6DF712D4-CBE2-46AB-ACC7-FF9A4F3E3B0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlocksCore.Admin", "Modules\BlocksCore.Admin\BlocksCore.Admin.csproj", "{0A414F0A-85C5-47D3-AA99-ED97AACA35BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,10 @@ Global
 		{6DF712D4-CBE2-46AB-ACC7-FF9A4F3E3B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF712D4-CBE2-46AB-ACC7-FF9A4F3E3B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF712D4-CBE2-46AB-ACC7-FF9A4F3E3B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A414F0A-85C5-47D3-AA99-ED97AACA35BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A414F0A-85C5-47D3-AA99-ED97AACA35BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A414F0A-85C5-47D3-AA99-ED97AACA35BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A414F0A-85C5-47D3-AA99-ED97AACA35BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +164,7 @@ Global
 		{6326BAFF-5B02-4677-B8D5-E69A53426EF5} = {3B902C58-6079-40EE-94D0-B6834933EC52}
 		{0B0816AF-B388-465C-A866-EA22A3D2A225} = {3B902C58-6079-40EE-94D0-B6834933EC52}
 		{6DF712D4-CBE2-46AB-ACC7-FF9A4F3E3B0C} = {3B902C58-6079-40EE-94D0-B6834933EC52}
+		{0A414F0A-85C5-47D3-AA99-ED97AACA35BD} = {3A7607EE-852C-4254-A04D-F4042F000AF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEFB9ABF-D7CC-4D42-BC6F-36EA8DA8A085}
