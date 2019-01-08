@@ -6,3 +6,4 @@ PublishProfiles/
 *.zip
 *.rar
 /Adp
+/BlocksCore.Web/App_Data/Sites/Default/DataProtection-Keys/key-0ba9b58a-5bb7-4216-86dc-f9ef73ac6471.xml
