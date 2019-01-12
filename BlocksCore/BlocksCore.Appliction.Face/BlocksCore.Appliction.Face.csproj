@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\BlocksCore.Framework\BlocksCore.Mvc.Core\BlocksCore.Mvc.Core.csproj" />
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Abstractions\BlocksCore.Loader.Abstractions.csproj" />
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Infrastructure\BlocksCore.Loader.Infrastructure.csproj" />
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader\BlocksCore.Loader.csproj" />

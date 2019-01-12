@@ -3,6 +3,7 @@ using BlocksCore.Loader.Abstractions.Modules.Builder;
 using BlocksCore.Loader.DeferredTasks;
 using BlocksCore.Loader.Infrastructure.Cache;
 using BlocksCore.Loader.Modules.Extensions;
+using BlocksCore.Mvc.Core.Extensions;
 using BlocksCore.ResourcesManagement;
 using BlocksCore.ResourcesManagement.TagHelpers;
 
@@ -28,7 +29,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
                // .AddCommands()
 
-                //.AddMvc()
+                .AddMvc()
 
                 //.AddSetupFeatures("OrchardCore.Setup")
 
