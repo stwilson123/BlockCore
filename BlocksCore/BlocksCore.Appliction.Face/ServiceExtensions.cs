@@ -6,6 +6,7 @@ using BlocksCore.Loader.Modules.Extensions;
 using BlocksCore.Mvc.Core.Extensions;
 using BlocksCore.ResourcesManagement;
 using BlocksCore.ResourcesManagement.TagHelpers;
+using BlocksCore.WebAPI.Extensions;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -28,7 +29,7 @@ namespace Microsoft.Extensions.DependencyInjection
             var builder = services.AddBlocksCore()
 
                // .AddCommands()
-
+                .AddWebApi()
                 .AddMvc()
 
                 //.AddSetupFeatures("OrchardCore.Setup")

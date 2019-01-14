@@ -1,4 +1,5 @@
 using BlocksCore.Loader.Abstractions.Modules;
+using BlocksCore.Mvc.Core.Route;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Internal;
 using Microsoft.AspNetCore.Routing;
@@ -8,10 +9,12 @@ namespace BlocksCore.Mvc.Core
 {
     public class ModularTenantRouteBuilder : IModularTenantRouteBuilder
     {
+        private IRoutePublisher _routePublisher;
         // Register one top level TenantRoute per tenant. Each instance contains all the routes
         // for this tenant.
-        public ModularTenantRouteBuilder()
+        public ModularTenantRouteBuilder(IRoutePublisher routePublisher)
         {
+            _routePublisher = routePublisher;
         }
 
         public IRouteBuilder Build(IApplicationBuilder appBuilder)
@@ -42,6 +45,10 @@ namespace BlocksCore.Mvc.Core
             
             
             builder.Routes.Insert(0, AttributeRouting.CreateAttributeMegaRoute(builder.ServiceProvider));
+            
+            
+            //Add all features route
+            _routePublisher.Publish(builder);
         }
     }
 }

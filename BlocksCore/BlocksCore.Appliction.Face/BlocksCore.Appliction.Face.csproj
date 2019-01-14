@@ -10,6 +10,7 @@
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Infrastructure\BlocksCore.Loader.Infrastructure.csproj" />
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader\BlocksCore.Loader.csproj" />
       <ProjectReference Include="..\BlocksCore.ResourcesManagement\BlocksCore.ResourcesManagement.csproj" />
+      <ProjectReference Include="..\BlocksCore.WebAPI\BlocksCore.WebAPI.csproj" />
     </ItemGroup>
 
 </Project>

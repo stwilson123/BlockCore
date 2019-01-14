@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using BlocksCore.SyntacticAbstractions.Types.Collections;
 
 namespace BlocksCore.SyntacticAbstractions.Types
 {

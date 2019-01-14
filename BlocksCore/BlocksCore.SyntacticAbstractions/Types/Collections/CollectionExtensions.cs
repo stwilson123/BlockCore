@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlocksCore.SyntacticAbstractions.Types
+namespace BlocksCore.SyntacticAbstractions.Types.Collections
 {
     /// <summary>
     /// Extension methods for Collections.
