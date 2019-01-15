@@ -16,7 +16,17 @@ namespace BlocksCore.Abstractions.DependencyInjection
 
         }
 
+        public static IServiceCollection AddSingleton(this IServiceCollection serviceCollection,string serviceKey,Type implementationType)
+        {
+            return Add(serviceCollection, serviceKey, implementationType, implementationType, ServiceLifetime.Singleton);
+
+        }
         
+        
+        public static IServiceCollection AddTransient(this IServiceCollection serviceCollection,string serviceKey, Type implementationType)
+        {
+            return Add(serviceCollection, serviceKey, implementationType, implementationType, ServiceLifetime.Transient);
+        }
         
         public static IServiceCollection AddTransient(this IServiceCollection serviceCollection,string serviceKey,Type serviceType, Type implementationType)
         {
@@ -31,6 +41,12 @@ namespace BlocksCore.Abstractions.DependencyInjection
         public static IServiceCollection AddScoped(this IServiceCollection serviceCollection,string serviceKey,Type serviceType, Type implementationType)
         {
             return Add(serviceCollection, serviceKey, serviceType, implementationType, ServiceLifetime.Scoped);
+
+        }
+        
+        public static IServiceCollection AddScoped(this IServiceCollection serviceCollection,string serviceKey,Type implementationType)
+        {
+            return Add(serviceCollection, serviceKey, implementationType, implementationType, ServiceLifetime.Scoped);
 
         }
         
