@@ -12,13 +12,11 @@ namespace BlocksCore.SyntacticAbstractions.Collection
     {
         private readonly ConcurrentDictionary<TKey, Lazy<TValue>> concurrentDictionary;
 
-        public ICollection<TKey> Keys => throw new NotImplementedException();
+        public ICollection<TKey> Keys => concurrentDictionary.Keys;
 
-        public ICollection<TValue> Values => throw new NotImplementedException();
 
-        public int Count => throw new NotImplementedException();
+        public int Count => concurrentDictionary.Count;
 
-        public bool IsReadOnly => throw new NotImplementedException();
 
 
         public LazyConcurrentDictionary()
