@@ -33,6 +33,11 @@ namespace BlocksCore.Abstractions.DependencyInjection
 
             return lazyDic.Select(t => t.Value).ToList();
         }
+
+        public ICollection<KeyValuePair<string, Type>> GetKeys()
+        {
+            return Types.Keys;
+        }
     }
 
   

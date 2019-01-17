@@ -9,7 +9,12 @@ namespace BlocksCore.Abstractions.DependencyInjection
 {
     public static class DependencyInjectionServiceExtensions
     {
-        static NamedServiceDicionary Types = new NamedServiceDicionary();
+        static NamedServiceDicionary Types;
+
+        static DependencyInjectionServiceExtensions()
+        {
+            Types = new NamedServiceDicionary();
+        }
         public static IServiceCollection AddSingleton(this IServiceCollection serviceCollection,string serviceKey,Type serviceType, Type implementationType)
         {
             return Add(serviceCollection, serviceKey, serviceType, implementationType, ServiceLifetime.Singleton);
@@ -66,6 +71,8 @@ namespace BlocksCore.Abstractions.DependencyInjection
 
             return (T)GetService(serviceProvider, serviceKey, typeof(T));
         }
+        
+        
         public static object GetService(this IServiceProvider serviceProvider,string serviceKey,Type serviceType)
         {
             
@@ -79,10 +86,25 @@ namespace BlocksCore.Abstractions.DependencyInjection
 
             return serviceProvider.GetService(lastestType);
         }
+
+
+        public static Type GetLastNamedServiceType(this IServiceCollection serviceCollection, string serviceKey)
+        {
+
+            return Types.GetKeys().LastOrDefault(kv => kv.Key == serviceKey).Value;
+        }
         
-        
-        
-     
-        
+        public static bool Contians(this IServiceCollection serviceCollection,Type implementType,ServiceLifetime serviceLifetime)
+        {
+            return serviceCollection.Contains(new ServiceDescriptor(implementType, implementType, serviceLifetime));
+        }
+
+
+        public static bool Contians(this IServiceCollection serviceCollection, Type implementType)
+        {
+            return serviceCollection.Any(s => s.ImplementationType == implementType); 
+        }
     }
+        
+    
 }
