@@ -18,6 +18,11 @@ namespace BlocksCore.Test.DependencyInjection
             var service =  serviceProvider.GetService<IName>("NamedA");
             
             Assert.IsType<Name>(service);
+
+
+            var serviceByType = serviceProvider.GetService<Name>();
+            
+            Assert.IsType<Name>(serviceByType);
         }
         
         
