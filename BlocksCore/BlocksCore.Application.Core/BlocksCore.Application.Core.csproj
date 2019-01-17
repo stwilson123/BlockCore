@@ -6,8 +6,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Core\BlocksCore.Abstractions\BlocksCore.Abstractions.csproj" />
+      <ProjectReference Include="..\..\Modules\BlocksCore.Admin\BlocksCore.Admin.csproj" />
       <ProjectReference Include="..\BlocksCore.Application.Abstratctions\BlocksCore.Application.Abstratctions.csproj" />
-      <ProjectReference Include="..\BlocksCore.Exception\BlocksCore.Exception.csproj" />
     </ItemGroup>
 
     <ItemGroup>

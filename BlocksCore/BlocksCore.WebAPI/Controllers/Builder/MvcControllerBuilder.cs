@@ -17,7 +17,7 @@ namespace Blocks.Framework.Web.Mvc.Controllers.Builder
         {
             get
             {
-                return this.apiControllerType ?? typeof(BlocksWebMvcController);
+                return this.apiControllerType ?? base.ApiControllerType;
             }
         }
 

@@ -14,8 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlocksCore\BlocksCore.Appliction.Face\BlocksCore.Appliction.Face.csproj" />
-    <ProjectReference Include="..\Modules\BlocksCore.Admin\BlocksCore.Admin.csproj" />
-    <ProjectReference Include="..\Modules\BlocksCore.Resources\BlocksCore.Resources.csproj" />
   </ItemGroup>
   <Import Project="..\BlocksCore\BlocksCore.Appliction.Face\BlocksCore.Application.Face.targets" />
 </Project>

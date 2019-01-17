@@ -16,25 +16,29 @@ namespace Blocks.Framework.Web.Mvc.Controllers
     /// <summary>
     /// Registers all MVC Controllers derived from <see cref="Controller"/>.
     /// </summary>
-    internal class ControllerConventional
+    public class ControllerConventional
     {
         private readonly IServiceCollection _serviceCollection;
         private readonly IExtensionManager _extensionManager;
 
-        public static string GetControllerSerivceName(string area,string controllerName)
+        internal static string GetControllerSerivceName(string area,string controllerName)
         {
             return $@"WebController/{area}/{controllerName}";
         }
 
+        public  static  string[] Postfixes()
+        {
+            return new[] {"Controller"};
+        }
 
-        public ControllerConventional(IServiceCollection serviceCollection,IExtensionManager extensionManager)
+        internal ControllerConventional(IServiceCollection serviceCollection,IExtensionManager extensionManager)
         {
             _serviceCollection = serviceCollection;
             _extensionManager = extensionManager;
         }
 
   
-        public void RegisterController()
+        internal void RegisterController()
         {
 
             var features = _extensionManager.LoadFeaturesAsync().Result;

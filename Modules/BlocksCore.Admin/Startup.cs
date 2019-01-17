@@ -14,12 +14,12 @@ namespace BlocksCore.Admin
         {
 
             
+            routes.MapAreaRoute(name: "Admin", areaName: "BlocksCore.EntryPoint",
+                template:"Admin",
+                defaults: new {controller = "Home", action = "Backstage"}
+                
+            );
            
-//            routes.MapAreaRoute(name: "Admin", areaName: "BlocksCore.Admin",
-//                  template:"Admin",
-//                  defaults: new {controller = "Admin", action = "Index"}
-//                
-//                );
         }
     }
 }

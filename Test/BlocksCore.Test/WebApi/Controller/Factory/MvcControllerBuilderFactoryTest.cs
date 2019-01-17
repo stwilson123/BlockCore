@@ -62,7 +62,7 @@ namespace Blocks.Framework.Web.Test.Mvc.Controller.Factory
         public void GetAllControllerForAll()
         {
             var servicePrefix =ModuleName.ToCamelCase();
-            var serviceName = servicePrefix + "/"+"TestMvc".ToCamelCase().RemovePostFix(BlocksWebMvcController.Postfixes); ;
+            var serviceName = servicePrefix + "/"+"TestMvc".ToCamelCase().RemovePostFix(ControllerConventional.Postfixes()); ;
             IDefaultControllerBuilderFactory factory = new MvcControllerBuilderFactory(serviceProvider,new MvcControllerOption()
             {
                 ApiControllerType = typeof(Microsoft.AspNetCore.Mvc.Controller)
