@@ -6,6 +6,7 @@
     <title></title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.bootcss.com/require.js/2.3.6/require.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -14,12 +15,17 @@
     </div>
 
     <script type="text/javascript">
+        require.config({
+            paths:
+                {text: "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"}
+        });
+        
         const UserSettingsNav = {
             template: `
 <div class="us__nav">
-  <router-link to="/settings/emails">emails</router-link>
+  <router-link to="/BlocksCore.Admin/emails">emails</router-link>
   <br>
-  <router-link to="/settings/profile">profile</router-link>
+  <router-link to="/BlocksCore.Admin/Views">profile</router-link>
 </div>
 `
         }
@@ -27,12 +33,14 @@
             template: `
 <div class="us">
   <h2>User Settings</h2>
+  <h3>{{ title }}</h3>
   <UserSettingsNav/>
+  
   <router-view class ="us__content"/>
   <router-view name="helper" class="us__content us__content--helper"/>
 </div>
   `,
-            script: 'alert(1);',
+            data:{ title:'alert(1);'},
             components: { UserSettingsNav }
         }
 
@@ -64,16 +72,21 @@
             mode: 'history',
             routes: [
                 {
-                    path: '/settings',
+                    path: '/BlocksCore.Admin',
                     // You could also have named views at tho top
                     component: UserSettings,
                     children: [{
                         path: 'emails',
                         component: UserEmailsSubscriptions
                     }, {
-                        path: 'profile',
+                        path: 'Views',
                         components: {
-                            default: UserProfile,
+                            default: function (resolve) {
+                                // This special require syntax will instruct Webpack to
+                                // automatically split your built code into bundles which
+                                // are loaded over Ajax requests.
+                                require(['./Views/UserProfile'], resolve)
+                            },
                             helper: UserProfilePreview
                         }
                     }]
@@ -81,7 +94,7 @@
             ]
         })
 
-        router.push('/settings/emails')
+        router.push('/BlocksCore.Admin/emails')
 
         new Vue({
             router,

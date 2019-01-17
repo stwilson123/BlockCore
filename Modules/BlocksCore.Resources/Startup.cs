@@ -12,7 +12,7 @@ namespace BlocksCore.Resources
 
         public override void Configure(IApplicationBuilder app, IRouteBuilder routes, IServiceProvider serviceProvider)
         {
-            ;
+         
             //base.Configure(app, routes, serviceProvider);
         }
     }
