@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using BlocksCore.Test.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
 namespace BlocksCore.Test
@@ -8,7 +10,7 @@ namespace BlocksCore.Test
     public class UnitTest1
     {
         [Fact]
-        public void keyvaluePairEqual()
+        public void KeyvaluePairEqual()
         {
             var KeyValuePairA = new KeyValuePair<string, Type>("KeyValuePair",typeof(UnitTest1));
             var KeyValuePairB = new KeyValuePair<string, Type>("KeyValuePair",typeof(UnitTest1));
@@ -32,7 +34,22 @@ namespace BlocksCore.Test
         {
 
             string a = null;
-            Assert.Throws(typeof(NullReferenceException), () => { a.Equals(null); });
+            Assert.Throws<NullReferenceException>(() => { a.Equals(null); });
+        }
+        
+        
+        [Fact]
+        public void serviceCollection_notregister_shouldbe_null()
+        {
+
+            IServiceCollection serviceCollection = new ServiceCollection();
+
+
+            IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
+
+            var service =  serviceProvider.GetService<IName>();
+            
+            Assert.Null(service);
         }
     }
 }

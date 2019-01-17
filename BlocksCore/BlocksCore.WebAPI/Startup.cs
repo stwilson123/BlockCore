@@ -1,6 +1,9 @@
 ﻿using System;
+using Blocks.Framework.Web.Mvc.Controllers;
 using BlocksCore.Abstractions;
+using BlocksCore.Loader.Abstractions.Extensions;
 using BlocksCore.Loader.Abstractions.Modules;
+using BlocksCore.Loader.Abstractions.Shell;
 using BlocksCore.Mvc.Core;
 using BlocksCore.Mvc.Core.Route;
 using BlocksCore.WebAPI.Providers;
@@ -13,40 +16,45 @@ namespace BlocksCore.WebAPI
 {
     public class Startup : StartupBase
     {
+        private readonly IExtensionManager _extensionManager;
         public override int Order => DependencyDepth.System;
 
-        private readonly IServiceProvider _serviceProvider;
 
-        public Startup(IServiceProvider serviceProvider)
+        public Startup(IExtensionManager extensionManager)
         {
-            _serviceProvider = serviceProvider;
+            _extensionManager = extensionManager;
         }
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            
- 
-
             AddRouteServices(services);
             AddMvcModuleCoreServices(services);
+            
+            //serviceProvider.GetService<ControllerConventional>().RegisterController();
+
+
+            AddFeatureMvcControl(services);
+        }
+
+        private void AddFeatureMvcControl(IServiceCollection services)
+        {
+         //  new ControllerConventional(services, _extensionManager).RegisterController();
         }
 
         private void AddRouteServices(IServiceCollection services)
         {
            
-            services.AddTransient<IRouteProvider, MvcRouteProvider>();
-            services.AddTransient<IRouteProvider, WebApiRouteProvider>();
+//            services.AddTransient<IRouteProvider, MvcRouteProvider>();
+//            services.AddTransient<IRouteProvider, WebApiRouteProvider>();
             
         }
 
         public override void Configure(IApplicationBuilder app, IRouteBuilder routes, IServiceProvider serviceProvider)
         {
-            
         }
 
         internal static void AddMvcModuleCoreServices(IServiceCollection services)
         {
-           
         }
 
     

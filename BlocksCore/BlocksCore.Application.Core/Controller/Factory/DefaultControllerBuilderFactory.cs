@@ -10,7 +10,7 @@ namespace BlocksCore.Application.Core.Controller.Factory
 {
     public class DefaultControllerBuilderFactory : IDefaultControllerBuilderFactory
     {
-        private readonly IServiceProvider _serviceProvider;
+        protected readonly IServiceProvider _serviceProvider;
 
         public DefaultControllerBuilderFactory(IServiceProvider serviceProvider)
         {

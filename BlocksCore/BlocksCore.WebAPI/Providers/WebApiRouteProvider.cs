@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using BlocksCore.Abstractions;
 using BlocksCore.Loader.Abstractions.Shell;
 using BlocksCore.Loader.Abstractions.Shell.Models;
 using BlocksCore.Mvc.Core.Route;
+using Microsoft.AspNetCore.Routing;
 
 namespace BlocksCore.WebAPI.Providers
 {
@@ -14,6 +16,11 @@ namespace BlocksCore.WebAPI.Providers
         public WebApiRouteProvider(IShellHost shellHost)
         {
             _shellHost = shellHost;
+        }
+
+        public Type GetRouteMapperType(RouteData routeData)
+        {
+            return null;
         }
 
         public IList<RouteDescriptor> GetRoutes()
@@ -32,7 +39,7 @@ namespace BlocksCore.WebAPI.Providers
                     Name =  areaName + "Route",
                     AreaName = areaName,
                     Priority = -10,
-                    RouteTemplate =  areaName + "/{controller}/{action}/{id}",
+                    RouteTemplate =  areaName + "/{controller}/{action}/{id?}",
                     Defaults = new {area = areaName, controller = "home", action = "index"}
                 };
             }).ToList();

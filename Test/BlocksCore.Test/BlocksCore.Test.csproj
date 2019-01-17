@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
 
         <IsPackable>false</IsPackable>
     </PropertyGroup>
@@ -14,15 +14,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Application.Abstratctions\BlocksCore.Application.Abstratctions.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Application.Core\BlocksCore.Application.Core.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Web.Abstractions\BlocksCore.Web.Abstractions.csproj" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.WebAPI\BlocksCore.WebAPI.csproj" />
       <ProjectReference Include="..\..\Core\BlocksCore.Abstractions\BlocksCore.Abstractions.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Application" />
-      <Folder Include="WebApi" />
     </ItemGroup>
 
     <ItemGroup>
