@@ -17,5 +17,11 @@ namespace BlocksCore.Admin.Controllers
             
             return PartialView();
         }
+        
+        public ActionResult Index2()
+        {
+            
+            return PartialView();
+        }
     }
 }

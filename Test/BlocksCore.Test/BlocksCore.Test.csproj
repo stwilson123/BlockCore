@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\BlocksCore.Navigation\BlocksCore.Navigation.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Application.Core\BlocksCore.Application.Core.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Web.Abstractions\BlocksCore.Web.Abstractions.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.WebAPI\BlocksCore.WebAPI.csproj" />

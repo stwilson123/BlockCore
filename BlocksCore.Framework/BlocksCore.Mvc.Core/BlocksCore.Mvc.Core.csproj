@@ -18,7 +18,6 @@
 
     <ItemGroup>
       <Folder Include="FileProviders" />
-      <Folder Include="LocationExpander" />
       <Folder Include="RazorPages" />
     </ItemGroup>
 

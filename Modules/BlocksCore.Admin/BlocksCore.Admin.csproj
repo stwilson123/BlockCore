@@ -27,4 +27,9 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="Views\Admin\Index2.html" />
+      <Content Include="wwwroot\Admin\Index2.html" />
+    </ItemGroup>
+
 </Project>

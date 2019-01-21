@@ -9,4 +9,8 @@
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Module.Face\BlocksCore.Module.Face.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="Views\Home\Backstage.js" />
+    </ItemGroup>
+
 </Project>
