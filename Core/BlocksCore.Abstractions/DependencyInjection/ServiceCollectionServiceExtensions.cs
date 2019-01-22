@@ -3,17 +3,19 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using BlocksCore.Exception;
+using BlocksCore.SyntacticAbstractions.Collection;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace BlocksCore.Abstractions.DependencyInjection
 {
     public static class DependencyInjectionServiceExtensions
     {
-        static NamedServiceDicionary Types;
+        static LazyConcurrentDictionary<IServiceCollection,NamedServiceDicionary> Types;
 
         static DependencyInjectionServiceExtensions()
         {
-            Types = new NamedServiceDicionary();
+            Types = new LazyConcurrentDictionary<IServiceCollection, NamedServiceDicionary>();
         }
         public static IServiceCollection AddSingleton(this IServiceCollection serviceCollection,string serviceKey,Type serviceType, Type implementationType)
         {
@@ -60,8 +62,14 @@ namespace BlocksCore.Abstractions.DependencyInjection
             
             serviceCollection.Add(new ServiceDescriptor(implementationType,implementationType,lifetime));
 
-            var dicKey = new KeyValuePair<string, Type>(serviceKey,serviceType);
-            Types.Add(dicKey, implementationType);
+           
+            var singletonNamedSerivceDic =Types.GetOrAdd(serviceCollection, (s) => new NamedServiceDicionary());
+
+            var dicKey = new KeyValuePair<string, Type>(serviceKey, serviceType);
+            singletonNamedSerivceDic.Add(dicKey, implementationType);
+
+            serviceCollection.TryAddSingleton(singletonNamedSerivceDic);
+
             return serviceCollection;
             
         }
@@ -76,9 +84,10 @@ namespace BlocksCore.Abstractions.DependencyInjection
         public static object GetService(this IServiceProvider serviceProvider,string serviceKey,Type serviceType)
         {
             
+            
             var dicKey = new KeyValuePair<string, Type>(serviceKey,serviceType);
             
-            var lastestType =  Types.Get(dicKey).LastOrDefault();
+            var lastestType = serviceProvider.GetService<NamedServiceDicionary>().Get(dicKey).LastOrDefault();
             if (lastestType == null)
             {
                 throw new BlocksException($"Type {serviceType} is not register.");
@@ -90,8 +99,9 @@ namespace BlocksCore.Abstractions.DependencyInjection
 
         public static Type GetLastNamedServiceType(this IServiceCollection serviceCollection, string serviceKey)
         {
+            var singletonNamedSerivceDic = Types.GetOrAdd(serviceCollection, (s) => new NamedServiceDicionary());
 
-            return Types.GetKeys().LastOrDefault(kv => kv.Key == serviceKey).Value;
+            return singletonNamedSerivceDic.GetKeys().LastOrDefault(kv => kv.Key == serviceKey).Value;
         }
         
         public static bool Contians(this IServiceCollection serviceCollection,Type implementType,ServiceLifetime serviceLifetime)

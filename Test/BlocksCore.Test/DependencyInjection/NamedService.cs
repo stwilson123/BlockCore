@@ -15,6 +15,7 @@ namespace BlocksCore.Test.DependencyInjection
 
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
+           
             var service =  serviceProvider.GetService<IName>("NamedA");
             
             Assert.IsType<Name>(service);
