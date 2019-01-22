@@ -3,7 +3,7 @@ using System;
 
 namespace BlocksCore.Localization.Abstractions
 {
-    public interface IModularLocalizer : IStringLocalizer
+    public interface IModularLocalizer<T> : IStringLocalizer<T>
     {
     }
 }

@@ -8,4 +8,8 @@
       <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="2.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Abstractions\BlocksCore.Loader.Abstractions.csproj" />
+    </ItemGroup>
+
 </Project>
