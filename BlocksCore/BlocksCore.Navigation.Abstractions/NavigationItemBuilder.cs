@@ -1,12 +1,10 @@
-﻿using BlocksCore.Abstractions.Security.Authorization;
+﻿using System.Linq;
+using BlocksCore.Abstractions.Security.Authorization;
 using BlocksCore.SyntacticAbstractions.Types;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Localization;
-using System.Collections.Generic;
-using System.Linq;
- 
 
-namespace Blocks.Framework.Navigation.Builder
+namespace BlocksCore.Navigation.Abstractions
 {
     public class NavigationItemBuilder
     {

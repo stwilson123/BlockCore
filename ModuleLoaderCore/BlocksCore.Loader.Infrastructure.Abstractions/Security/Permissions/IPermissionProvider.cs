@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlocksCore.Infrastructure.Security.Permissions
+namespace OrchardCore.Infrastructure.Security.Permissions
 {
     /// <summary>
     /// Implemented by modules to enumerate the types of permissions

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.FileProviders;
 
-namespace BlocksCore.Infrastructure.Scripting
+namespace OrchardCore.Infrastructure.Scripting
 {
     /// <summary>
     /// An implementation of <see cref="IScriptingManager"/> provides services to evaluate

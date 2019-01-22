@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlocksCore.Infrastructure.Cache
+namespace OrchardCore.Infrastructure.Cache
 {
     public class CacheContext
     {

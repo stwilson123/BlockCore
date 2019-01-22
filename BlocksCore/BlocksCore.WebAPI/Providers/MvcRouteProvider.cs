@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Blocks.Framework.Web.Mvc.Controllers;
 using BlocksCore.Abstractions;
 using BlocksCore.Abstractions.DependencyInjection;
 using BlocksCore.Loader.Abstractions.Shell;
 using BlocksCore.Loader.Abstractions.Shell.Models;
 using BlocksCore.Mvc.Core.Conventions;
 using BlocksCore.Mvc.Core.Route;
+using BlocksCore.WebAPI.Controllers;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 

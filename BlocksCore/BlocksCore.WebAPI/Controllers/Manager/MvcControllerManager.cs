@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
- 
 using BlocksCore.Application.Abstratctions.Controller;
 using BlocksCore.Application.Abstratctions.Manager;
 using BlocksCore.SyntacticAbstractions.Types.Collections;
 
-namespace Blocks.Framework.Web.Mvc.Controllers.Manager
+namespace BlocksCore.WebAPI.Controllers.Manager
 {
     public class MvcControllerManager : ControllerManger<DefaultControllerInfo<MvcControllerActionInfo>,MvcControllerActionInfo>
     {

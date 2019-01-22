@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Linq;
 
-namespace BlocksCore.Infrastructure.Entities
+namespace OrchardCore.Infrastructure.Entities
 {
     public class Entity : IEntity
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlocksCore.Infrastructure.Scripting
+namespace OrchardCore.Infrastructure.Scripting
 {
     /// <summary>
     /// An implementation of <see cref="IGlobalMethodProvider"/> provides custom methods for

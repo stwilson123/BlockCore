@@ -7,11 +7,9 @@ using BlocksCore.Loader.Extensions;
 using BlocksCore.Loader.Extensions.Features;
 using BlocksCore.Loader.Test.Stubs;
 using Microsoft.AspNetCore.Hosting;
- 
-using OrchardCore.Tests.Stubs;
 using Xunit;
 
-namespace OrchardCore.Tests.Extensions
+namespace BlocksCore.Loader.Test.Extensions
 {
     public class ExtensionManagerTests
     {

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.FileProviders;
 
-namespace BlocksCore.Infrastructure.Files
+namespace OrchardCore.Infrastructure.Files
 {
     public static class FileProviderExtensions
     {

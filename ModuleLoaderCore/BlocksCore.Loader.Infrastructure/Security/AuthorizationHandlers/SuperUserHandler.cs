@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using BlocksCore.Infrastructure.Settings;
+using OrchardCore.Infrastructure.Settings;
 
 namespace BlocksCore.Loader.Infrastructure.Security.AuthorizationHandlers
 {

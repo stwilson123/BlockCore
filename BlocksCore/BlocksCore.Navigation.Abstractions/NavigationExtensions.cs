@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Linq;
- 
-using Blocks.Framework.Navigation.Builder;
 using BlocksCore.Exception;
 
-namespace Blocks.Framework.Navigation
+namespace BlocksCore.Navigation.Abstractions
 {
     public static class NavigationExtensions
     {

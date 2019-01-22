@@ -1,5 +1,6 @@
 using System.Resources;
-using Blocks.Framework.Navigation.Manager;
+using BlocksCore.Navigation.Abstractions.Manager;
+using BlocksCore.Navigation.Manager;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

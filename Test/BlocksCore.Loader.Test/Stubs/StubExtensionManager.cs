@@ -1,13 +1,12 @@
-using BlocksCore.Loader.Abstractions.Extensions;
-using BlocksCore.Loader.Abstractions.Extensions.Features;
-using BlocksCore.Loader.Abstractions.Extensions.Loaders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
- 
+using BlocksCore.Loader.Abstractions.Extensions;
+using BlocksCore.Loader.Abstractions.Extensions.Features;
+using BlocksCore.Loader.Abstractions.Extensions.Loaders;
 
-namespace OrchardCore.Tests.Stubs
+namespace BlocksCore.Loader.Test.Stubs
 {
     public class StubExtensionManager : IExtensionManager
     {

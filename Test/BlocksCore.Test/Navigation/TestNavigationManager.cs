@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Blocks.Framework.Navigation.Manager;
-using Blocks.Framework.Navigation.Provider;
+using BlocksCore.Navigation.Abstractions.Manager;
+using BlocksCore.Navigation.Abstractions.Provider;
+using BlocksCore.Navigation.Manager;
 using BlocksCore.Test.Application.Controller.TestModel;
-using BlocksCore.Test.DependencyInjection.Model;
+using BlocksCore.Test.Navigation.Model;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;

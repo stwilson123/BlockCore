@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Blocks.Framework.Navigation
+namespace BlocksCore.Navigation.Abstractions
 {
     public static class RouteHelper
     {

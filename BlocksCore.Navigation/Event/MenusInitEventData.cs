@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BlocksCore.Navigation.Abstractions;
 
-namespace Blocks.Framework.Navigation.Event
+namespace BlocksCore.Navigation.Event
 {
     public class MenusInitEventData  
     {

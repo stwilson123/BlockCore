@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json.Linq;
 
-namespace BlocksCore.Infrastructure.Entities
+namespace OrchardCore.Infrastructure.Entities
 {
     public static class EntityExtensions
     {

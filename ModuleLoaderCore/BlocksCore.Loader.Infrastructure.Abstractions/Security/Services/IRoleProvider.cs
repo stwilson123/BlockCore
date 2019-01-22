@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlocksCore.Infrastructure.Security.Services
+namespace OrchardCore.Infrastructure.Security.Services
 {
     public interface IRoleProvider
     {

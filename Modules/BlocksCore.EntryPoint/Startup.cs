@@ -1,11 +1,9 @@
-﻿using BlocksCore.Loader.Abstractions.Modules;
+﻿using System;
+using BlocksCore.Loader.Abstractions.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BlocksCore.Resources
+namespace BlocksCore.EntryPoint
 {
     public class Startup : StartupBase
     {

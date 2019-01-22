@@ -1,8 +1,8 @@
 using BlocksCore.Loader.Infrastructure.Entities.Scripting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using BlocksCore.Infrastructure.Entities;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Entities;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Entities
 {

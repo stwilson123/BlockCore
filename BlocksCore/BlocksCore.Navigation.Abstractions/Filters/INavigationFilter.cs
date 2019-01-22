@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Blocks.Framework.Navigation.Filters
+namespace BlocksCore.Navigation.Abstractions.Filters
 {
     public interface INavigationFilter
     {

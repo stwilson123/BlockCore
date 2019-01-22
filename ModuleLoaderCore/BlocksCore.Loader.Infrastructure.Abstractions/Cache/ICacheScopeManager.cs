@@ -1,6 +1,6 @@
 using System;
 
-namespace BlocksCore.Infrastructure.Cache
+namespace OrchardCore.Infrastructure.Cache
 {
     public interface ICacheScopeManager
     {

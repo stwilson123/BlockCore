@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
- 
-using Blocks.Framework.Web.Mvc.Controllers.Builder;
-using Blocks.Framework.Web.Mvc.Controllers.Manager;
 using BlocksCore.Application.Abstratctions.Controller.Builder;
 using BlocksCore.Application.Core.Controller.Factory;
 using BlocksCore.SyntacticAbstractions.Types;
+using BlocksCore.WebAPI.Controllers.Builder;
+using BlocksCore.WebAPI.Controllers.Manager;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Blocks.Framework.Web.Mvc.Controllers.Factory
+namespace BlocksCore.WebAPI.Controllers.Factory
 {
     public class MvcControllerBuilderFactory : DefaultControllerBuilderFactory
     {

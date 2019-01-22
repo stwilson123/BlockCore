@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.FileProviders;
 
-namespace BlocksCore.Infrastructure.Scripting
+namespace OrchardCore.Infrastructure.Scripting
 {
     public interface IScriptingEngine
     {

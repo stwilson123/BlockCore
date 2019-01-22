@@ -1,5 +1,5 @@
 using System;
-using BlocksCore.Infrastructure.Entities;
+using OrchardCore.Infrastructure.Entities;
 
 namespace BlocksCore.Loader.Infrastructure.Entities
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Blocks.Framework.Web.Mvc.Controllers.Builder
+namespace BlocksCore.WebAPI.Controllers.Builder
 {
     public class MvcControllerOption
     {

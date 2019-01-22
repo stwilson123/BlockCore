@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BlocksCore.Infrastructure.Cache
+namespace OrchardCore.Infrastructure.Cache
 {
     /// <summary>
     /// Returns a set of values describing the discriminators of the context and a value

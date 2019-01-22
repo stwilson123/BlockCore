@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Blocks.Framework.Navigation.Event;
-using Blocks.Framework.Navigation.Filters;
-using Blocks.Framework.Navigation.Provider;
+using BlocksCore.Navigation.Abstractions;
+using BlocksCore.Navigation.Abstractions.Filters;
+using BlocksCore.Navigation.Abstractions.Manager;
+using BlocksCore.Navigation.Abstractions.Provider;
 using Microsoft.Extensions.Localization;
-using NavigationProviderContext = Blocks.Framework.Navigation.Provider.NavigationProviderContext;
+using NavigationProviderContext = BlocksCore.Navigation.Provider.NavigationProviderContext;
 
-namespace Blocks.Framework.Navigation.Manager
+namespace BlocksCore.Navigation.Manager
 {
     public class NavigationManager : INavigationManager
     {

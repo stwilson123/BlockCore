@@ -1,6 +1,6 @@
 using System;
 
-namespace BlocksCore.Infrastructure.Scripting
+namespace OrchardCore.Infrastructure.Scripting
 {
     public class GlobalMethod
     {

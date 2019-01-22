@@ -1,10 +1,9 @@
-﻿using BlocksCore.Abstractions.Security.Authorization;
+﻿using System.Collections.Generic;
+using BlocksCore.Abstractions.Security.Authorization;
 using BlocksCore.SyntacticAbstractions.Types;
 using Microsoft.Extensions.Localization;
-using System.Collections.Generic;
- 
 
-namespace Blocks.Framework.Navigation
+namespace BlocksCore.Navigation.Abstractions
 {
    
 

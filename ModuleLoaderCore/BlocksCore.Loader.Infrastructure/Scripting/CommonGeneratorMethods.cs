@@ -4,7 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Text;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Scripting
 {

@@ -1,7 +1,4 @@
-﻿using System;
- 
-
-namespace Blocks.Framework.Navigation.Provider
+﻿namespace BlocksCore.Navigation.Abstractions.Provider
 {
     
     /// <summary>

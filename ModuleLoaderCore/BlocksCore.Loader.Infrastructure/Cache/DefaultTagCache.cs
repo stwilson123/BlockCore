@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BlocksCore.Loader.Abstractions.Modules.Extensions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using BlocksCore.Infrastructure.Cache;
+using OrchardCore.Infrastructure.Cache;
 
 namespace BlocksCore.Loader.Infrastructure.Cache
 {

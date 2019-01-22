@@ -4,8 +4,7 @@ using BlocksCore.Application.Abstratctions.Controller.Builder;
 using BlocksCore.Application.Abstratctions.Manager;
 using BlocksCore.Application.Core.Controller.Builder;
 
-
-namespace Blocks.Framework.Web.Mvc.Controllers.Builder
+namespace BlocksCore.WebAPI.Controllers.Builder
 {
     public class MvcControllerBuilder<T,TControllerActionBuilder> : DefaultControllerBuilder<T,TControllerActionBuilder> where TControllerActionBuilder : MvcControllerActionBuilder<T>
     {

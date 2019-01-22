@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using BlocksCore.Abstractions;
 using BlocksCore.Abstractions.DependencyInjection;
 using BlocksCore.Loader.Abstractions.Extensions;
-using BlocksCore.Loader.Abstractions.Shell;
-using BlocksCore.Loader.Abstractions.Shell.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-
-namespace Blocks.Framework.Web.Mvc.Controllers
+namespace BlocksCore.WebAPI.Controllers
 {
     /// <summary>
     /// Registers all MVC Controllers derived from <see cref="Controller"/>.

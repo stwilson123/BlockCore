@@ -1,6 +1,6 @@
-﻿using BlocksCore.Infrastructure.Security.Permissions;
+﻿using OrchardCore.Infrastructure.Security.Permissions;
 
-namespace BlocksCore.Infrastructure.Security
+namespace OrchardCore.Infrastructure.Security
 {
     public class StandardPermissions
     {

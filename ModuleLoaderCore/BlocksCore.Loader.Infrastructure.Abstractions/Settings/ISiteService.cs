@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Primitives;
 
-namespace BlocksCore.Infrastructure.Settings
+namespace OrchardCore.Infrastructure.Settings
 {
     /// <summary>
     /// Provides services to manage the sites settings.

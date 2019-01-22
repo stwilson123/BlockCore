@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Reflection;
-using Blocks.Framework.Web.Mvc.Controllers;
-using Blocks.Framework.Web.Mvc.Controllers.Builder;
-using Blocks.Framework.Web.Mvc.Controllers.Factory;
-using Blocks.Framework.Web.Mvc.Controllers.Manager;
-using BlocksCore.Abstractions.DependencyInjection;
 using BlocksCore.Application.Abstratctions.Controller.Factory;
-using BlocksCore.Application.Core.Manager;
 using BlocksCore.SyntacticAbstractions.Types;
-using BlocksCore.Test.Application.Controller.TestModel;
 using BlocksCore.Test.WebApi.Controller.TestModel;
 using BlocksCore.Web.Abstractions.HttpMethod;
+using BlocksCore.WebAPI.Controllers;
+using BlocksCore.WebAPI.Controllers.Builder;
+using BlocksCore.WebAPI.Controllers.Factory;
+using BlocksCore.WebAPI.Controllers.Manager;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
- 
 
-namespace Blocks.Framework.Web.Test.Mvc.Controller.Factory
+namespace BlocksCore.Test.WebApi.Controller.Factory
 {
     public class MvcControllerBuilderFactoryTest  
     {

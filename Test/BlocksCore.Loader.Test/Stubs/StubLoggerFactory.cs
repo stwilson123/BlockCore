@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
+using Microsoft.Extensions.Logging;
 
-namespace OrchardCore.Tests
+namespace BlocksCore.Loader.Test.Stubs
 {
     public class StubLoggerFactory : ILoggerFactory
     {

@@ -10,13 +10,12 @@ using BlocksCore.Loader.Abstractions.Shell.Descriptor.Models;
 using BlocksCore.Loader.Abstractions.Shell.Extensions;
 using BlocksCore.Loader.Environment.Shell.Builders;
 using BlocksCore.Loader.Extensions.Features;
+using BlocksCore.Loader.Test.Stubs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
- 
-using OrchardCore.Tests.Stubs;
 using Xunit;
 
-namespace OrchardCore.Tests.Shell
+namespace BlocksCore.Loader.Test.Shell
 {
     public class ShellContainerFactoryTests
     {

@@ -4,7 +4,7 @@ using BlocksCore.Loader.Infrastructure.Cache.CacheContextProviders;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
-using BlocksCore.Infrastructure.Cache;
+using OrchardCore.Infrastructure.Cache;
 
 namespace BlocksCore.Loader.Infrastructure.Cache
 {

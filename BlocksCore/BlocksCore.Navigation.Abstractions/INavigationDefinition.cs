@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Localization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.Extensions.Localization;
 
-namespace Blocks.Framework.Navigation
+namespace BlocksCore.Navigation.Abstractions
 {
     public interface INavigationDefinition
     {

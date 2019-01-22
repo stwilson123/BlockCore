@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
- 
 using BlocksCore.Application.Abstratctions.Controller;
 using BlocksCore.Application.Abstratctions.Filters;
 using BlocksCore.Web.Abstractions.HttpMethod;
 
-namespace Blocks.Framework.Web.Mvc.Controllers
+namespace BlocksCore.WebAPI.Controllers
 {
     public class MvcControllerActionInfo : DefaultControllerActionInfo
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using BlocksCore.Infrastructure.Cache;
+using OrchardCore.Infrastructure.Cache;
 
 namespace BlocksCore.Loader.Infrastructure.Cache.CacheContextProviders
 {

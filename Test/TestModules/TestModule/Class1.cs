@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestModule
+﻿namespace ModuleSample
 {
     public class Class1
     {

@@ -1,6 +1,6 @@
-﻿using INavigationManager = Blocks.Framework.Navigation.Manager.INavigationManager;
+﻿using INavigationManager = BlocksCore.Navigation.Abstractions.Manager.INavigationManager;
 
-namespace Blocks.Framework.Navigation.Provider
+namespace BlocksCore.Navigation.Abstractions.Provider
 {
     public interface INavigationProviderContext  
     {

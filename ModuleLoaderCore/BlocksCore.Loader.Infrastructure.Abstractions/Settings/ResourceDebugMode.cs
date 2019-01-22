@@ -1,4 +1,4 @@
-﻿namespace BlocksCore.Infrastructure.Settings
+﻿namespace OrchardCore.Infrastructure.Settings
 {
     public enum ResourceDebugMode
     {

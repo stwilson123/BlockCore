@@ -1,11 +1,8 @@
-﻿using Blocks.Framework.Navigation;
-using Blocks.Framework.Navigation.Provider;
+﻿using BlocksCore.Navigation.Abstractions;
+using BlocksCore.Navigation.Abstractions.Provider;
 using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BlocksCore.Test.DependencyInjection.Model
+namespace BlocksCore.Test.Navigation.Model
 {
     public class TestNavigationProvider : INavigationProvider
     {

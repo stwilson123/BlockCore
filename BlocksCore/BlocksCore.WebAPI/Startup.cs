@@ -1,5 +1,4 @@
 ﻿using System;
-using Blocks.Framework.Web.Mvc.Controllers;
 using BlocksCore.Abstractions;
 using BlocksCore.Loader.Abstractions.Extensions;
 using BlocksCore.Loader.Abstractions.Modules;

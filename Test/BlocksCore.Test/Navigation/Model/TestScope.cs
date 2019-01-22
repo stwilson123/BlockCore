@@ -1,9 +1,9 @@
 using System;
-using BlocksCore.Abstractions.DependencyInjection;
+using BlocksCore.Test.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace BlocksCore.Test.DependencyInjection.Model
+namespace BlocksCore.Test.Navigation.Model
 {
     public class TestScope
     {

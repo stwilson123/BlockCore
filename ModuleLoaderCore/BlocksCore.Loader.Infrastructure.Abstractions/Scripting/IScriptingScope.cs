@@ -1,4 +1,4 @@
-﻿namespace BlocksCore.Infrastructure.Scripting
+﻿namespace OrchardCore.Infrastructure.Scripting
 {
     public interface IScriptingScope
     {

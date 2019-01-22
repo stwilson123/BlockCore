@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Blocks.Framework.Navigation.Manager
+namespace BlocksCore.Navigation.Abstractions.Manager
 {
     /// <summary>
     /// Manages navigation in the application.

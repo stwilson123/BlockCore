@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace BlocksCore.Infrastructure.Security
+namespace OrchardCore.Infrastructure.Security
 {
     /// <summary>
     /// Represents a claim that is granted to all users within a role.

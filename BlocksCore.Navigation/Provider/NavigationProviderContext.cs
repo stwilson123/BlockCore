@@ -1,6 +1,7 @@
-﻿using Blocks.Framework.Navigation.Manager;
+﻿using BlocksCore.Navigation.Abstractions.Manager;
+using BlocksCore.Navigation.Abstractions.Provider;
 
-namespace Blocks.Framework.Navigation.Provider
+namespace BlocksCore.Navigation.Provider
 {
     internal class NavigationProviderContext : INavigationProviderContext
     {

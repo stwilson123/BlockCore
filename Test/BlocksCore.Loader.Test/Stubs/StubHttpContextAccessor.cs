@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
 
-namespace OrchardCore.Tests.Stubs
+namespace BlocksCore.Loader.Test.Stubs
 {
     public class StubHttpContextAccessor : IHttpContextAccessor
     {

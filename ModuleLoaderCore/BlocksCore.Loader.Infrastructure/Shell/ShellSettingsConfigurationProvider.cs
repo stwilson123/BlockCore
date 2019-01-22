@@ -5,7 +5,7 @@ using BlocksCore.Loader.Infrastructure.Yaml;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using BlocksCore.Infrastructure.Files;
+using OrchardCore.Infrastructure.Files;
 
 namespace BlocksCore.Loader.Infrastructure.Shell
 {

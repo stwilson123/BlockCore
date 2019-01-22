@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using BlocksCore.Infrastructure.Security.Permissions;
+using OrchardCore.Infrastructure.Security.Permissions;
 
 namespace BlocksCore.Loader.Infrastructure.Security.AuthorizationHandlers
 {

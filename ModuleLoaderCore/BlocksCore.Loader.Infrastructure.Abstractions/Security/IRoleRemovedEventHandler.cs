@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace BlocksCore.Infrastructure.Security
+namespace OrchardCore.Infrastructure.Security
 {
     public interface IRoleRemovedEventHandler
     {

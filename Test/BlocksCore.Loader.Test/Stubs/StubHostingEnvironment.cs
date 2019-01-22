@@ -2,7 +2,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.FileProviders;
 
-namespace OrchardCore.Tests.Stubs
+namespace BlocksCore.Loader.Test.Stubs
 {
     public class StubHostingEnvironment : IHostingEnvironment
     {

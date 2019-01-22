@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using BlocksCore.Application.Abstratctions.Controller.Factory;
 using BlocksCore.Application.Core.Controller.Builder;
 
-
-namespace Blocks.Framework.Web.Mvc.Controllers.Builder
+namespace BlocksCore.WebAPI.Controllers.Builder
 {
     public class BatchMvcControllerBuilder<T> : BatchDefaultControllerBuilder<T>
     {

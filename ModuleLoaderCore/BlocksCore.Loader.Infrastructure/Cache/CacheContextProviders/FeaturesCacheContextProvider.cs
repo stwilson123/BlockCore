@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using BlocksCore.Loader.Abstractions.Extensions.Features;
-using BlocksCore.Infrastructure.Cache;
+using OrchardCore.Infrastructure.Cache;
 
 namespace BlocksCore.Loader.Infrastructure.Cache.CacheContextProviders
 {

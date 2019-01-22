@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
-using BlocksCore.Infrastructure.Files;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Files;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Scripting.Files
 {

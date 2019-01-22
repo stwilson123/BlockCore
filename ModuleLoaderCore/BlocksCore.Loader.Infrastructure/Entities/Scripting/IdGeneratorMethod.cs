@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
-using BlocksCore.Infrastructure.Entities;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Entities;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Entities.Scripting
 {

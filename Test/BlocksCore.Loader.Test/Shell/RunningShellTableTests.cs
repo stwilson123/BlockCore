@@ -3,7 +3,7 @@ using BlocksCore.Loader.Abstractions.Shell.Extensions;
 using BlocksCore.Loader.Environment.Shell;
 using Xunit;
 
-namespace OrchardCore.Tests.Shell
+namespace BlocksCore.Loader.Test.Shell
 {
     public class RunningShellTableTests
     {

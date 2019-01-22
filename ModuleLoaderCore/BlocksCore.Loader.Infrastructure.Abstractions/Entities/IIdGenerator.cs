@@ -1,4 +1,4 @@
-namespace BlocksCore.Infrastructure.Entities
+namespace OrchardCore.Infrastructure.Entities
 {
     public interface IIdGenerator
     {

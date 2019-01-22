@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using BlocksCore.Abstractions.Security.Authorization;
+﻿using BlocksCore.Abstractions.Security.Authorization;
 using Microsoft.Extensions.Localization;
 
-namespace Blocks.Framework.Navigation
+namespace BlocksCore.Navigation.Abstractions
 {
     public interface INavigationItemDefinition : INavigation
     {

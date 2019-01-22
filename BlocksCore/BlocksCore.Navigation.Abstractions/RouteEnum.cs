@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Blocks.Framework.Navigation
+﻿namespace BlocksCore.Navigation.Abstractions
 {
     public class RouteConst
     {

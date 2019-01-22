@@ -1,4 +1,4 @@
-﻿namespace BlocksCore.Infrastructure.Cache
+﻿namespace OrchardCore.Infrastructure.Cache
 {
     public struct CacheContextEntry
     {

@@ -1,6 +1,6 @@
 using BlocksCore.Loader.Infrastructure.Scripting.Files;
 using Microsoft.Extensions.DependencyInjection;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Scripting
 {

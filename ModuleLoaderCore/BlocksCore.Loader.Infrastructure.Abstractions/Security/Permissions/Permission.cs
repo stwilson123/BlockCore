@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace BlocksCore.Infrastructure.Security.Permissions
+namespace OrchardCore.Infrastructure.Security.Permissions
 {
     public class Permission
     {

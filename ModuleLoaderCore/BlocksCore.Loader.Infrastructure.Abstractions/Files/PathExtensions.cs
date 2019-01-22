@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Extensions.Primitives;
 
-namespace BlocksCore.Infrastructure.Files
+namespace OrchardCore.Infrastructure.Files
 {
     public class PathExtensions
     {

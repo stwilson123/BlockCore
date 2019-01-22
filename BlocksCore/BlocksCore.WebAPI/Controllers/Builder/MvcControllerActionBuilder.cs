@@ -8,8 +8,7 @@ using BlocksCore.SyntacticAbstractions.Reflection.Extensions;
 using BlocksCore.Web.Abstractions.HttpMethod;
 using BlocksCore.WebAPI.Helper;
 
-
-namespace Blocks.Framework.Web.Mvc.Controllers.Builder
+namespace BlocksCore.WebAPI.Controllers.Builder
 {
     public class MvcControllerActionBuilder<T> : DefaultControllerActionBuilder<T>
     {

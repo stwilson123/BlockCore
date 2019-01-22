@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlocksCore.Infrastructure.Security
+namespace OrchardCore.Infrastructure.Security
 {
     public class Role: IRole
     {

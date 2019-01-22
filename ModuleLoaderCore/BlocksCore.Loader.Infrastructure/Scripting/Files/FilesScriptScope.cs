@@ -1,5 +1,5 @@
 using Microsoft.Extensions.FileProviders;
-using BlocksCore.Infrastructure.Scripting;
+using OrchardCore.Infrastructure.Scripting;
 
 namespace BlocksCore.Loader.Infrastructure.Scripting.Files
 {

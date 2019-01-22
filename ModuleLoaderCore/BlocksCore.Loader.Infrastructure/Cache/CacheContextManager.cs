@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlocksCore.Infrastructure.Cache;
+using OrchardCore.Infrastructure.Cache;
 
 namespace BlocksCore.Loader.Infrastructure.Cache
 {

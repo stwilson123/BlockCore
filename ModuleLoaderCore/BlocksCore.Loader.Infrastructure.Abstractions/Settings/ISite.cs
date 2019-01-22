@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Routing;
-using BlocksCore.Infrastructure.Entities;
+using OrchardCore.Infrastructure.Entities;
 
-namespace BlocksCore.Infrastructure.Settings
+namespace OrchardCore.Infrastructure.Settings
 {
     public interface ISite : IEntity
     {
