@@ -8,7 +8,7 @@ namespace BlocksCore.Localization.Abstractions
 {
     public interface ILocalizationManager
     {
-        ILocalizationDictionary GetDictionary(CultureInfo culture);
+        ILocalizationDictionary GetDictionary(string sourceName,CultureInfo culture);
 
     }
 }

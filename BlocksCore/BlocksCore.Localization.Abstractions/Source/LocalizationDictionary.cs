@@ -6,15 +6,22 @@ namespace BlocksCore.Localization.Abstractions.Source
 {
     public class LocalizationDictionary : ILocalizationDictionary
     {
-        public CultureInfo CultureInfo { get; }
-
-        public string this[string name]
+        private readonly string _sourceName;
+        
+        public LocalizationDictionary(CultureInfo cultureInfo, string sourceName)
         {
-            get => throw new System.NotImplementedException();
-            set => throw new System.NotImplementedException();
+            CultureInfo = cultureInfo;
+            _sourceName = sourceName;
+        }
+        public CultureInfo CultureInfo { get; }
+        
+        
+        public ModularLocalizedString GetOrNull(string name)
+        {
+             return new ModularLocalizedString(_sourceName,name);
         }
 
-        public ModularLocalizedString GetOrNull(string name)
+        public ModularLocalizedString GetOrNull(string name, params object[] value)
         {
             throw new System.NotImplementedException();
         }
@@ -26,7 +33,12 @@ namespace BlocksCore.Localization.Abstractions.Source
 
         public ILocalizationDictionary Merge(ILocalizationDictionary other)
         {
-            throw new System.NotImplementedException();
+            if (other == null)
+                return this;
+            
+            
+            
+            return this;
         }
     }
 }

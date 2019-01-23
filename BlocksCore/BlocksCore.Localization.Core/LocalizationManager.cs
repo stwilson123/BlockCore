@@ -24,9 +24,8 @@ namespace BlocksCore.Localization.Core
         }
 
 
-        public ILocalizationDictionary GetDictionary(CultureInfo culture)
+        public ILocalizationDictionary GetDictionary(string sourceName,CultureInfo culture)
         {
-            var sourceName = "";
             var cachedDictionary = _cache.GetOrCreate(string.Format(CacheKeyPrefix, sourceName, culture.Name), k => new Lazy<ILocalizationDictionary>(() =>
             {
                 LocalizationDictionary dic = new LocalizationDictionary();

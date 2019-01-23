@@ -1,11 +1,13 @@
 ﻿using System;
 using BlocksCore.Abstractions;
+using BlocksCore.Abstractions.Shell;
 using BlocksCore.Loader.Abstractions.Extensions;
 using BlocksCore.Loader.Abstractions.Modules;
 using BlocksCore.Loader.Abstractions.Shell;
 using BlocksCore.Mvc.Core;
 using BlocksCore.Mvc.Core.Route;
 using BlocksCore.WebAPI.Providers;
+using BlocksCore.WebAPI.Shell;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,10 +31,10 @@ namespace BlocksCore.WebAPI
             AddRouteServices(services);
             AddMvcModuleCoreServices(services);
             
-            //serviceProvider.GetService<ControllerConventional>().RegisterController();
-
-
+           
             AddFeatureMvcControl(services);
+
+            services.AddSingleton<ITenantShellManager, TenantShellManager>()
         }
 
         private void AddFeatureMvcControl(IServiceCollection services)
@@ -52,10 +54,9 @@ namespace BlocksCore.WebAPI
         {
         }
 
-        internal static void AddMvcModuleCoreServices(IServiceCollection services)
+        internal   void AddMvcModuleCoreServices(IServiceCollection services)
         {
         }
-
-    
+ 
     }
 }

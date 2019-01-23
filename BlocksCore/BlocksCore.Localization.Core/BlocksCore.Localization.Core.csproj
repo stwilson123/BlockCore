@@ -9,6 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Core\BlocksCore.Abstractions\BlocksCore.Abstractions.csproj" />
       <ProjectReference Include="..\BlocksCore.Localization.Abstractions\BlocksCore.Localization.Abstractions.csproj" />
     </ItemGroup>
 
