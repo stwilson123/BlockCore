@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ModuleDescription.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Localization.Core\BlocksCore.Localization.Core.csproj" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Module.Face\BlocksCore.Module.Face.csproj" />
+    </ItemGroup>
+
+</Project>

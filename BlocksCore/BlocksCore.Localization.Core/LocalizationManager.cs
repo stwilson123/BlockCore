@@ -28,9 +28,10 @@ namespace BlocksCore.Localization.Core
         {
             var cachedDictionary = _cache.GetOrCreate(string.Format(CacheKeyPrefix, sourceName, culture.Name), k => new Lazy<ILocalizationDictionary>(() =>
             {
-                LocalizationDictionary dic = new LocalizationDictionary();
+                LocalizationDictionary dic = new LocalizationDictionary(culture,sourceName);
                 var localizationDictionaries = Task.WhenAll(_localizationDictionaryProviders
-                    .Select(t => t.GetLocalizationDictionary(sourceName, culture.Name))).Result;
+                    .Where(t => t.Sources.Any(s => s.SourceName == sourceName && s.CultureInfo.Name == culture.Name))
+                    .Select(t => t.GetLocalizationDictionary())).Result;
                 
                 foreach (var localizationDictionary in localizationDictionaries)
                 {
@@ -38,11 +39,9 @@ namespace BlocksCore.Localization.Core
                 }
                 return dic;
             }, LazyThreadSafetyMode.ExecutionAndPublication));
+            
             return cachedDictionary.Value;
-        }
-        
-        
-        
+        }   
         
     }
 }

@@ -9,6 +9,7 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+        <PackageReference Include="Moq" Version="4.10.1" />
         <PackageReference Include="xunit" Version="2.3.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     </ItemGroup>
@@ -16,9 +17,12 @@
     <ItemGroup>
       <ProjectReference Include="..\..\BlocksCore.Navigation\BlocksCore.Navigation.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Application.Core\BlocksCore.Application.Core.csproj" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Localization.Abstractions\BlocksCore.Localization.Abstractions.csproj" />
+      <ProjectReference Include="..\..\BlocksCore\BlocksCore.Localization.Core\BlocksCore.Localization.Core.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.Web.Abstractions\BlocksCore.Web.Abstractions.csproj" />
       <ProjectReference Include="..\..\BlocksCore\BlocksCore.WebAPI\BlocksCore.WebAPI.csproj" />
       <ProjectReference Include="..\..\Core\BlocksCore.Abstractions\BlocksCore.Abstractions.csproj" />
+      <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader\BlocksCore.Loader.csproj" />
     </ItemGroup>
 
     <ItemGroup>

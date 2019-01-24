@@ -10,6 +10,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\ModuleLoaderCore\BlocksCore.Loader.Abstractions\BlocksCore.Loader.Abstractions.csproj" />
+      <ProjectReference Include="..\BlocksCore.Exception\BlocksCore.Exception.csproj" />
+      <ProjectReference Include="..\BlocksCore.SyntacticAbstractions\BlocksCore.SyntacticAbstractions.csproj" />
     </ItemGroup>
 
 </Project>

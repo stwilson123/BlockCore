@@ -26,6 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         public static IServiceCollection AddBlocksCoreKernel(this IServiceCollection services, Action<BlocksCoreBuilder> configure)
         {
+
             var builder = services.AddBlocksCore()
 
                // .AddCommands()

@@ -11,14 +11,18 @@ namespace BlocksCore.Localization.Abstractions.Source
         /// Culture of the dictionary.
         /// </summary>
         CultureInfo CultureInfo { get; }
-        
- 
+
+
+        string SourceName { get; }
+
+        IDictionary<string, string> Translations { get; }
+
         /// <summary>
         /// Gets a <see cref="LocalizedString"/> for given <paramref name="name"/>.
         /// </summary>
         /// <param name="name">Name (key) to get localized string</param>
         /// <returns>The localized string or null if not found in this dictionary</returns>
-        ModularLocalizedString GetOrNull(string name);
+        LocalizedString GetOrNull(string name);
 
         
         /// <summary>
@@ -26,13 +30,13 @@ namespace BlocksCore.Localization.Abstractions.Source
         /// </summary>
         /// <param name="name">Name (key) to get localized string</param>
         /// <returns>The localized string or null if not found in this dictionary</returns>
-        ModularLocalizedString GetOrNull(string name,params object[] value);
+        LocalizedString GetOrNull(string name,params object[] value);
         
         /// <summary>
         /// Gets a list of all strings in this dictionary.
         /// </summary>
         /// <returns>List of all <see cref="LocalizedString"/> object</returns>
-        IReadOnlyList<ModularLocalizedString> GetAllStrings();
+        IEnumerable<LocalizedString> GetAllStrings();
 
         ILocalizationDictionary Merge(ILocalizationDictionary other);
     }

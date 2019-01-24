@@ -1,9 +1,12 @@
+using System.Globalization;
 using System.Threading.Tasks;
 
 namespace BlocksCore.Localization.Abstractions.Source
 {
     public interface ILocalizationDictionaryProvider
     {
-        Task<ILocalizationDictionary> GetLocalizationDictionary(string sourceName,string culture);
+        SourceType[] Sources { get; }
+
+        Task<ILocalizationDictionary> GetLocalizationDictionary();
     }
 }

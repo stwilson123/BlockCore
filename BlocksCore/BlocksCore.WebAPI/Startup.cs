@@ -34,7 +34,7 @@ namespace BlocksCore.WebAPI
            
             AddFeatureMvcControl(services);
 
-            services.AddSingleton<ITenantShellManager, TenantShellManager>()
+            services.AddSingleton<ITenantShellManager, TenantShellManager>();
         }
 
         private void AddFeatureMvcControl(IServiceCollection services)
