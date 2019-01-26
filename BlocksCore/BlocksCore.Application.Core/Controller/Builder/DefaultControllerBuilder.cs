@@ -16,7 +16,6 @@ namespace BlocksCore.Application.Core.Controller.Builder
 {
     public class DefaultControllerBuilder<T,TControllerActionBuilder> : IDefaultControllerBuilder<T> where TControllerActionBuilder :DefaultControllerActionBuilder<T>  
     {
-        private IServiceProvider _iocResolver;
         protected Dictionary<string, TControllerActionBuilder> _actionBuilders;
         public string ServiceName { get; set; }
         public Type ServiceInterfaceType { get; set; }
@@ -35,9 +34,8 @@ namespace BlocksCore.Application.Core.Controller.Builder
         /// </summary>
         /// <param name="serviceName">Name of the controller</param>
         /// <param name="iocResolver">Ioc resolver</param>
-        public DefaultControllerBuilder(string serviceName, IServiceProvider iocResolver, IControllerRegister defaultControllerManager)
+        public DefaultControllerBuilder(string serviceName, IControllerRegister defaultControllerManager)
         {
-            Check.NotNull(iocResolver, nameof(iocResolver));
 
             if (string.IsNullOrWhiteSpace(serviceName))
             {
@@ -49,7 +47,6 @@ namespace BlocksCore.Application.Core.Controller.Builder
                 throw new ArgumentException("serviceName is not properly formatted! It must contain a single-depth namespace at least! For example: 'myapplication/myservice'.", "serviceName");
             }
 
-            _iocResolver = iocResolver;
             _defaultControllerManager = defaultControllerManager;
 
             ServiceName = serviceName;
@@ -60,7 +57,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
                 .Where(methodInfo => methodInfo.GetSingleAttributeOrNull<BlocksActionNameAttribute>() != null);
             foreach (var methodInfo in methodInfos)
             {
-                var actionBuilder = (TControllerActionBuilder)typeof(TControllerActionBuilder).New(this, methodInfo, iocResolver);
+                var actionBuilder = (TControllerActionBuilder)typeof(TControllerActionBuilder).New(this, methodInfo);
                 var remoteServiceAttr = methodInfo.GetSingleAttributeOrNull<RemoteServiceAttribute>();
                 if (remoteServiceAttr != null && !remoteServiceAttr.IsEnabledFor(methodInfo))
                 {

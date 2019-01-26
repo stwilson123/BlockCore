@@ -48,7 +48,6 @@ namespace BlocksCore.Application.Core.Controller.Builder
 
      
         private readonly IDefaultControllerBuilder<T> _controller;
-        private readonly IServiceProvider _iocResolver;
 
  
         /// <summary>
@@ -57,10 +56,9 @@ namespace BlocksCore.Application.Core.Controller.Builder
         /// <param name="defaultControllerBuilder">Reference to the <see cref="defaultControllerBuilder{T}"/> which created this object</param>
         /// <param name="methodInfo">Method</param>
         /// <param name="iocResolver"></param>
-        public DefaultControllerActionBuilder(IDefaultControllerBuilder<T> defaultControllerBuilder, MethodInfo methodInfo, IServiceProvider iocResolver)
+        public DefaultControllerActionBuilder(IDefaultControllerBuilder<T> defaultControllerBuilder, MethodInfo methodInfo)
         {
             _controller = defaultControllerBuilder;
-            _iocResolver = iocResolver;
             Method = methodInfo;
             ActionName = GetNormalizedActionName();
         }

@@ -19,7 +19,7 @@ namespace BlocksCore.WebAPI.Controllers.Builder
         
         public bool ConventionalVerbs { get; set; }
 
-        public MvcControllerActionBuilder(IDefaultControllerBuilder<T> defaultControllerBuilder, MethodInfo methodInfo, IServiceProvider serviceProvider) : base(defaultControllerBuilder, methodInfo, serviceProvider)
+        public MvcControllerActionBuilder(IDefaultControllerBuilder<T> defaultControllerBuilder, MethodInfo methodInfo) : base(defaultControllerBuilder, methodInfo)
         {
         }
 

@@ -15,37 +15,39 @@ namespace BlocksCore.Test.Application.Controller.Factory
 {
     public class DefaultControllerBuilderFactoryTest  
     {
-        private IEnumerable<Type> servicesType;
-
-        private IServiceProvider serviceProvider;
+         private IEnumerable<Type> servicesType;
+//
+//        private IServiceProvider serviceProvider;
 
         private string ModuleName = "TestModule";
         public DefaultControllerBuilderFactoryTest()
         {
-            IServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.AddSingleton<DefaultControllerManager>();
-            serviceCollection.AddTransient<ITestAppService, TestAppService>();
-            
-            serviceProvider = serviceCollection.BuildServiceProvider();
-
-
-            servicesType = serviceCollection.Select(service => service.ImplementationType).ToList();
+//            IServiceCollection serviceCollection = new ServiceCollection();
+//            serviceCollection.AddSingleton<DefaultControllerManager>();
+//            serviceCollection.AddTransient<ITestAppService, TestAppService>();
+//            
+//            serviceProvider = serviceCollection.BuildServiceProvider();
+//
+//
+           servicesType = new List<Type>(){ typeof(TestAppService)  };
         }
         
         [Fact]
         public void GetAppServiceForOneWithDefault()
         {
+       
             var serviceName = ModuleName + "/Test";
-            IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(serviceProvider);
-            factory.For<ITestAppService>(serviceName).WithApiExplorer(true).Build();
 
-            TestAppService(serviceName);
+            var defaultControllerManager = new DefaultControllerManager();
+            IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(defaultControllerManager);
+            factory.For<ITestAppService>(serviceName).WithApiExplorer(true).Build();
+             
+            TestAppService(serviceName,defaultControllerManager);
         }
 
-        private void TestAppService(string serviceName)
+        private void TestAppService(string serviceName,DefaultControllerManager defaultControllerManager)
         {
-            var defaultControllermanager = serviceProvider.GetService<DefaultControllerManager>();
-            var testController = defaultControllermanager.FindOrNull(serviceName);
+            var testController = defaultControllerManager.FindOrNull(serviceName);
             Assert.NotNull(testController);
             Assert.Equal(testController.ServiceName, serviceName);
          //   Assert.True(testController.IsApiExplorerEnabled);
@@ -80,10 +82,11 @@ namespace BlocksCore.Test.Application.Controller.Factory
         {
             var servicePrefix = ModuleName.ToCamelCase();
             var serviceName = servicePrefix + "/"+ typeof(TestAppService).Name.ToCamelCase().RemovePostFix(AppService.Postfixes);
-            IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(serviceProvider);
+            var defaultControllerManager = new DefaultControllerManager();
+            IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(defaultControllerManager);
             factory.ForAll<ITestAppService>(servicePrefix,servicesType).Build();
 
-            TestAppService(serviceName);
+            TestAppService(serviceName,defaultControllerManager);
         }
         
     }

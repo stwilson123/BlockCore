@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BlocksCore.Application.Abstratctions.Controller.Builder;
 using BlocksCore.Application.Abstratctions.Controller.Factory;
+using BlocksCore.Application.Abstratctions.Manager;
 using BlocksCore.Application.Core.Controller.Builder;
 using BlocksCore.Application.Core.Manager;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,11 +11,11 @@ namespace BlocksCore.Application.Core.Controller.Factory
 {
     public class DefaultControllerBuilderFactory : IDefaultControllerBuilderFactory
     {
-        protected readonly IServiceProvider _serviceProvider;
+        protected readonly IControllerRegister defaultControllerManager;
 
-        public DefaultControllerBuilderFactory(IServiceProvider serviceProvider)
+        public DefaultControllerBuilderFactory(IControllerRegister defaultControllerManager)
         {
-            _serviceProvider = serviceProvider;
+            this.defaultControllerManager = defaultControllerManager;
         }
 
         /// <summary>
@@ -24,7 +25,7 @@ namespace BlocksCore.Application.Core.Controller.Factory
         /// <typeparam name="T">Type of the proxied object</typeparam>
         public virtual IDefaultControllerBuilder<T> For<T>(string serviceName)
         {
-            return new DefaultControllerBuilder<T,DefaultControllerActionBuilder<T>>(serviceName, _serviceProvider,_serviceProvider.GetService<DefaultControllerManager>());
+            return new DefaultControllerBuilder<T,DefaultControllerActionBuilder<T>>(serviceName, defaultControllerManager);
         }
 
         /// <summary>

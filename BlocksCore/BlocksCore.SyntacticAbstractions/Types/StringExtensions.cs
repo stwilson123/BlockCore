@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -593,5 +594,16 @@ namespace BlocksCore.SyntacticAbstractions.Types
 
             return result;
         }
+
+
+        public static bool EndsWith(this string str,string[] others,Func<string,bool[], bool> check)
+        {
+            if (check == null || str == null || others == null)
+                return false;
+            return check.Invoke(str,others.Select(o => str.EndsWith(o,StringComparison.OrdinalIgnoreCase)).ToArray());
+        }
+        
+        
+       
     }
 }

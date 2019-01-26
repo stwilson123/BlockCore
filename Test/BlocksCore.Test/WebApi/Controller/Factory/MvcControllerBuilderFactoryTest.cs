@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using BlocksCore.Application.Abstratctions.Controller.Factory;
+using BlocksCore.Application.Abstratctions.Manager;
+using BlocksCore.Application.Core.Manager;
 using BlocksCore.SyntacticAbstractions.Types;
 using BlocksCore.Test.WebApi.Controller.TestModel;
 using BlocksCore.Web.Abstractions.HttpMethod;
@@ -41,37 +43,39 @@ namespace BlocksCore.Test.WebApi.Controller.Factory
         public void GetAppServiceForOneWithDefault()
         {
             var serviceName = ModuleName + "/Test";
-            IDefaultControllerBuilderFactory factory = new MvcControllerBuilderFactory(serviceProvider,new MvcControllerOption()
+            var mvcControllerMananger = new MvcControllerManager();
+            IDefaultControllerBuilderFactory factory = new MvcControllerBuilderFactory(new MvcControllerOption()
             {
                  ApiControllerType = typeof(Microsoft.AspNetCore.Mvc.Controller)
                  
                 
-            });
+            },mvcControllerMananger);
             factory.For<TestMvcController>(serviceName).WithApiExplorer(true).Build();
 
-            TestControllerForTestController(serviceName);
+            TestControllerForTestController(serviceName,mvcControllerMananger);
         }
 
         [Fact]
         public void GetAllControllerForAll()
         {
             var servicePrefix =ModuleName.ToCamelCase();
-            var serviceName = servicePrefix + "/"+"TestMvc".ToCamelCase().RemovePostFix(ControllerConventional.Postfixes()); ;
-            IDefaultControllerBuilderFactory factory = new MvcControllerBuilderFactory(serviceProvider,new MvcControllerOption()
+            var serviceName = servicePrefix + "/"+"TestMvc".ToCamelCase().RemovePostFix(ApiControllerConventional.Postfixes()); ;
+            var mvcControllerMananger = new MvcControllerManager();
+
+            IDefaultControllerBuilderFactory factory = new MvcControllerBuilderFactory(new MvcControllerOption()
             {
                 ApiControllerType = typeof(Microsoft.AspNetCore.Mvc.Controller)
                  
                 
-            });
+            },mvcControllerMananger);
             factory.ForAll<Microsoft.AspNetCore.Mvc.Controller>(servicePrefix,servicesType).Build();
 
-            TestControllerForTestController(serviceName);
+            TestControllerForTestController(serviceName,mvcControllerMananger);
         }
 
-        private void TestControllerForTestController(string serviceName)
+        private void TestControllerForTestController(string serviceName,MvcControllerManager defaultControllerManager)
         {
-            var defaultControllermanager = serviceProvider.GetService<MvcControllerManager>();
-            var testController = defaultControllermanager.FindOrNull(serviceName);
+            var testController = defaultControllerManager.FindOrNull(serviceName);
             Assert.NotNull(testController);
             Assert.Equal(testController.ServiceName, serviceName);
           //  Assert.True(testController.IsApiExplorerEnabled);

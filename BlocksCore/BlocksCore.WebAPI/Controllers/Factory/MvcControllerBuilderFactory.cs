@@ -13,7 +13,7 @@ namespace BlocksCore.WebAPI.Controllers.Factory
     {
         private readonly MvcControllerOption _mvcControllerOption;
 
-        public MvcControllerBuilderFactory(IServiceProvider serviceProvider,MvcControllerOption mvcControllerOption) : base(serviceProvider)
+        public MvcControllerBuilderFactory(MvcControllerOption mvcControllerOption,MvcControllerManager mvcControllerManager) : base(mvcControllerManager)
         {
             Check.NotNull(mvcControllerOption, nameof(mvcControllerOption));
             _mvcControllerOption = mvcControllerOption;
@@ -21,8 +21,8 @@ namespace BlocksCore.WebAPI.Controllers.Factory
 
         public override IDefaultControllerBuilder<T> For<T>(string serviceName)
         {
-            return new MvcControllerBuilder<T,MvcControllerActionBuilder<T>>(serviceName, _serviceProvider,
-                _serviceProvider.GetService<MvcControllerManager>(),_mvcControllerOption.ApiControllerType);
+            return new MvcControllerBuilder<T,MvcControllerActionBuilder<T>>(serviceName, this.defaultControllerManager
+                ,_mvcControllerOption.ApiControllerType);
         }
 
         public override IBatchDefaultControllerBuilder<T> ForAll<T>(string servicePrefix,IEnumerable<Type> serviceTypes)
