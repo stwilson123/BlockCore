@@ -31,6 +31,16 @@ namespace BlocksCore.Mvc.Core
         {
             var inlineConstraintResolver = builder.ServiceProvider.GetService<IInlineConstraintResolver>();
 
+           
+         
+            
+            
+            builder.Routes.Insert(0, AttributeRouting.CreateAttributeMegaRoute(builder.ServiceProvider));
+            
+            
+            //Add all features route
+            _routePublisher.Publish(builder);
+            
             // The default route is added to each tenant as a template route, with a prefix
             builder.Routes.Add(new Microsoft.AspNetCore.Routing.Route(
                 builder.DefaultHandler,
@@ -41,14 +51,9 @@ namespace BlocksCore.Mvc.Core
                 null,
                 inlineConstraintResolver)
             );
-         
             
             
-            builder.Routes.Insert(0, AttributeRouting.CreateAttributeMegaRoute(builder.ServiceProvider));
             
-            
-            //Add all features route
-            _routePublisher.Publish(builder);
         }
     }
 }

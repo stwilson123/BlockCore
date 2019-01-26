@@ -18,7 +18,10 @@ namespace BlocksCore.Loader.Extensions.Features
                 return feature;
             }
 
-            throw new InvalidOperationException($"Could not resolve feature for type {dependency.Name}");
+            return feature;
+            // if not found feature,it will be null.
+
+            // throw new InvalidOperationException($"Could not resolve feature for type {dependency.Name}");
         }
 
         public void TryAdd(Type type, IFeatureInfo feature)

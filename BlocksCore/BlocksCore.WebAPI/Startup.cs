@@ -46,7 +46,7 @@ namespace BlocksCore.WebAPI
         {
            
 //            services.AddTransient<IRouteProvider, MvcRouteProvider>();
-//            services.AddTransient<IRouteProvider, WebApiRouteProvider>();
+          services.AddTransient<IRouteProvider, WebApiRouteProvider>();
             
         }
 
