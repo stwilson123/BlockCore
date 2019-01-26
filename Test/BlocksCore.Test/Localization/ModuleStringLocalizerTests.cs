@@ -66,8 +66,8 @@ namespace BlocksCore.Test.Localization
             SetupDictionary(cultrue,sourceName,new LocalizationDictionary(cultrue, sourceName,new Dictionary<string, string>()
                 {  { "name","nameA"},{"name1","nameB"},{"name2","namec {0}"},{"name3","named {0} {1}"}}
             ));
-            var localizer = new DefaultModularLocalizer<ModuleStringLocalizerTests>(cultrue, _localizationManager.Object,
-                _tenantShellManager.Object   );
+            var localizer = new DefaultModularLocalizer(cultrue, _localizationManager.Object,
+                _tenantShellManager.Object ,typeof(ModuleStringLocalizerTests)  );
 
             Assert.Equal(localizer["name"], "nameA");
             Assert.Equal(localizer["name1"], "nameB");
