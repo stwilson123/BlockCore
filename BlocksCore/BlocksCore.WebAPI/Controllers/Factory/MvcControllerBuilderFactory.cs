@@ -19,9 +19,9 @@ namespace BlocksCore.WebAPI.Controllers.Factory
             _mvcControllerOption = mvcControllerOption;
         }
 
-        public override IDefaultControllerBuilder<T> For<T>(string serviceName)
+        public override IDefaultControllerBuilder<T> For<T>(string servicePrefix, string serviceName)
         {
-            return new MvcControllerBuilder<T,MvcControllerActionBuilder<T>>(serviceName, this.defaultControllerManager
+            return new MvcControllerBuilder<T,MvcControllerActionBuilder<T>>(servicePrefix, serviceName, this.defaultControllerManager
                 ,_mvcControllerOption.ApiControllerType);
         }
 
@@ -30,4 +30,4 @@ namespace BlocksCore.WebAPI.Controllers.Factory
             return new BatchMvcControllerBuilder<T>(this, servicePrefix,serviceTypes);
         }
     }
-}
+} 

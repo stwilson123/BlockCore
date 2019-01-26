@@ -50,7 +50,7 @@ namespace BlocksCore.WebAPI.Providers
         {
             string area = routeData.GetAreaName();
             string controllerName = routeData.GetControllerName();
-            var serviceKey = ControllerConventional.GetControllerSerivceName(area,controllerName) + "Controller";
+            var serviceKey = ApiControllerConventional.GetControllerSerivceName(area,controllerName) + "Controller";
 
             return _serviceCollection.GetLastNamedServiceType(serviceKey);
         }

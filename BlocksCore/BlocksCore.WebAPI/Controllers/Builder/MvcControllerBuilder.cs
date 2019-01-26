@@ -20,7 +20,7 @@ namespace BlocksCore.WebAPI.Controllers.Builder
             }
         }
 
-        public MvcControllerBuilder(string serviceName, IControllerRegister defaultControllerManager, Type apiControllerType) : base(serviceName, defaultControllerManager)
+        public MvcControllerBuilder(string servicePrefix,string serviceName, IControllerRegister defaultControllerManager, Type apiControllerType) : base(servicePrefix,serviceName, defaultControllerManager)
         {
             this.apiControllerType = apiControllerType;
         }
@@ -33,6 +33,7 @@ namespace BlocksCore.WebAPI.Controllers.Builder
         public override void Build()
         {
             var controllerInfo = new DefaultControllerInfo<MvcControllerActionInfo>(
+                ServicePrefix,
                 ServiceName,
                 ServiceInterfaceType,
                 ApiControllerType,

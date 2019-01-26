@@ -33,7 +33,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
            // _iocManager = iocManager;
             _controllerBuilderFactory = controllerBuilderFactory;
             _types = types;
-            _servicePrefix = servicePrefix?.ToCamelCase();
+            _servicePrefix = servicePrefix;
         }
         public IBatchDefaultControllerBuilder<T> ForMethods(Action<IDefaultControllerActionBuilder> action)
         {
@@ -86,7 +86,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
                 var builder = typeof(IDefaultControllerBuilderFactory)
                     .GetMethod("For", BindingFlags.Public | BindingFlags.Instance)
                     .MakeGenericMethod(type)
-                    .Invoke(_controllerBuilderFactory, new object[] {serviceName});
+                    .Invoke(_controllerBuilderFactory, new object[] { _servicePrefix, serviceName });
 
                 if (_filters != null)
                 {
@@ -128,7 +128,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
                 typeName = typeName.Substring(1);
             }
 
-            return typeName.ToCamelCase();
+            return typeName;
         }
     }
 

@@ -4,6 +4,10 @@ namespace BlocksCore.WebAPI.Controllers.Builder
 {
     public class MvcControllerOption
     {
-        public Type ApiControllerType { get; set; }
+        public MvcControllerOption(Type apiControllerType)
+        {
+            ApiControllerType = apiControllerType;
+        }
+        public Type ApiControllerType { get;  }
     }
 }

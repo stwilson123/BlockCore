@@ -7,10 +7,16 @@ namespace BlocksCore.Application.Abstratctions.Controller
     public class DefaultControllerInfo<TActionInfo> : IControllerInfo
         where TActionInfo : DefaultControllerActionInfo
     {
+
+
+        public string ServicePrefix { get; }
+
          /// <summary>
-        /// Name of the service.
-        /// </summary>
+         /// Name of the service.
+         /// </summary>
         public string ServiceName { get; private set; }
+
+       
 
         /// <summary>
         /// Service interface type.
@@ -54,6 +60,7 @@ namespace BlocksCore.Application.Abstratctions.Controller
         /// <param name="isApiExplorerEnabled">Is API explorer enabled</param>
         /// <param name="isProxyScriptingEnabled">Is proxy scripting enabled</param>
         public DefaultControllerInfo(
+            string servicePrefix,
             string serviceName, 
             Type serviceInterfaceType, 
             Type apiControllerType, 
@@ -61,6 +68,7 @@ namespace BlocksCore.Application.Abstratctions.Controller
             IFilter[] filters = null,
             bool? isApiExplorerEnabled = null )
         {
+            ServicePrefix = servicePrefix;
             ServiceName = serviceName;
             ServiceInterfaceType = serviceInterfaceType;
             ApiControllerType = apiControllerType;

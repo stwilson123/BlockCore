@@ -21,12 +21,12 @@ namespace BlocksCore.WebAPI.Controllers
 
         internal static string GetControllerSerivceName(string area,string controllerName)
         {
-            return $@"ApiController/{area}/{controllerName}";
+            return $@"api/{area}/{controllerName}";
         }
 
         public  static  string[] Postfixes()
         {
-            return new[] {"Controller"};
+            return new[] {"Service"};
         }
 
         internal ApiControllerConventional(IExtensionManager extensionManager,MvcControllerBuilderFactory mvcControllerBuilderFactory)
@@ -42,13 +42,14 @@ namespace BlocksCore.WebAPI.Controllers
             var features = _extensionManager.LoadFeaturesAsync().Result;
             foreach (var feature in features)
             {
-                _mvcControllerBuilderFactory.ForAll<IAppService>(feature.FeatureInfo.Id,
-                    feature.ExportedTypes.Where(IsController)).Build();
+                _mvcControllerBuilderFactory.ForAll<IAppService>( AreaTemplate.GetAreaKey(new AreaOption() { AreaName = feature.FeatureInfo.Name,
+                     FunctionType = "api"
+                }),feature.ExportedTypes.Where(IsController)).Build();
             }
           
         }
-        
-        protected bool IsController(Type typeInfo)
+
+        private bool IsController(Type typeInfo)
         {
             if (!typeInfo.IsClass)
             {

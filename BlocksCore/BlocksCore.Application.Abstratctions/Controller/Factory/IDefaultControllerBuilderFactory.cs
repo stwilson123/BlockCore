@@ -11,7 +11,7 @@ namespace BlocksCore.Application.Abstratctions.Controller.Factory
         /// </summary>
         /// <param name="serviceName">Name of the Api controller service. For example: 'myapplication/myservice'.</param>
         /// <typeparam name="T">Type of the proxied object</typeparam>
-        IDefaultControllerBuilder<T> For<T>(string serviceName);
+        IDefaultControllerBuilder<T> For<T>(string servicePrefix,string serviceName);
 
         /// <summary>
         /// Generates multiple controllers.

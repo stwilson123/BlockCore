@@ -5,7 +5,9 @@ namespace BlocksCore.Application.Abstratctions.Controller.Helper
 {
     public static class DynamicApiServiceNameHelper
     {
-        private static readonly Regex ServiceNameRegex = new Regex(@"^([a-zA-Z_][a-zA-Z0-9_]*)(\/([a-zA-Z_][a-zA-Z0-9_]*))+$");
+        //private static readonly Regex ServiceNameRegex = new Regex(@"^([a-zA-Z_][a-zA-Z0-9_]*)(\/([a-zA-Z_][a-zA-Z0-9_]*))+$");
+        private static readonly Regex ServiceNameRegex = new Regex(@"^([a-zA-Z_.\/][a-zA-Z0-9_.\/]*)(\/([a-zA-Z_][a-zA-Z0-9_]*))+$");
+
         private static readonly Regex ServiceNameWithActionRegex = new Regex(@"^([a-zA-Z_][a-zA-Z0-9_]*)(\/([a-zA-Z_][a-zA-Z0-9_]*)){2,}$");
 
         public static bool IsValidServiceName(string serviceName)

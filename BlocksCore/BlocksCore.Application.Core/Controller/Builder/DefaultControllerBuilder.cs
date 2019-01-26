@@ -17,7 +17,10 @@ namespace BlocksCore.Application.Core.Controller.Builder
     public class DefaultControllerBuilder<T,TControllerActionBuilder> : IDefaultControllerBuilder<T> where TControllerActionBuilder :DefaultControllerActionBuilder<T>  
     {
         protected Dictionary<string, TControllerActionBuilder> _actionBuilders;
-        public string ServiceName { get; set; }
+
+        public string ServicePrefix { get; }
+
+        public string ServiceName { get; }
         public Type ServiceInterfaceType { get; set; }
         public bool? IsApiExplorerEnabled { get; set; }
 
@@ -34,7 +37,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
         /// </summary>
         /// <param name="serviceName">Name of the controller</param>
         /// <param name="iocResolver">Ioc resolver</param>
-        public DefaultControllerBuilder(string serviceName, IControllerRegister defaultControllerManager)
+        public DefaultControllerBuilder(string servicePrefix, string serviceName, IControllerRegister defaultControllerManager)
         {
 
             if (string.IsNullOrWhiteSpace(serviceName))
@@ -48,7 +51,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
             }
 
             _defaultControllerManager = defaultControllerManager;
-
+            ServicePrefix = servicePrefix;
             ServiceName = serviceName;
             ServiceInterfaceType = typeof (T);
 
@@ -102,6 +105,7 @@ namespace BlocksCore.Application.Core.Controller.Builder
         public virtual void Build()
         {
             var controllerInfo = new DefaultControllerInfo<DefaultControllerActionInfo>(
+                ServicePrefix,
                 ServiceName,
                 ServiceInterfaceType,
                 ApiControllerType,

@@ -40,7 +40,7 @@ namespace BlocksCore.Test.Application.Controller.Factory
 
             var defaultControllerManager = new DefaultControllerManager();
             IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(defaultControllerManager);
-            factory.For<ITestAppService>(serviceName).WithApiExplorer(true).Build();
+            factory.For<ITestAppService>(ModuleName,serviceName).WithApiExplorer(true).Build();
              
             TestAppService(serviceName,defaultControllerManager);
         }
@@ -49,6 +49,7 @@ namespace BlocksCore.Test.Application.Controller.Factory
         {
             var testController = defaultControllerManager.FindOrNull(serviceName);
             Assert.NotNull(testController);
+            Assert.Equal(testController.ServicePrefix, ModuleName);
             Assert.Equal(testController.ServiceName, serviceName);
          //   Assert.True(testController.IsApiExplorerEnabled);
             Assert.True(testController.ApiControllerType == typeof(NopController));
@@ -80,8 +81,8 @@ namespace BlocksCore.Test.Application.Controller.Factory
         [Fact]
         public void GetAllAppServiceForAll()
         {
-            var servicePrefix = ModuleName.ToCamelCase();
-            var serviceName = servicePrefix + "/"+ typeof(TestAppService).Name.ToCamelCase().RemovePostFix(AppService.Postfixes);
+            var servicePrefix = ModuleName;
+            var serviceName = servicePrefix + "/"+ typeof(TestAppService).Name.RemovePostFix(AppService.Postfixes);
             var defaultControllerManager = new DefaultControllerManager();
             IDefaultControllerBuilderFactory factory = new DefaultControllerBuilderFactory(defaultControllerManager);
             factory.ForAll<ITestAppService>(servicePrefix,servicesType).Build();

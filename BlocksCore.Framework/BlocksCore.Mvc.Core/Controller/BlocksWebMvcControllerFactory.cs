@@ -29,21 +29,22 @@ namespace BlocksCore.Mvc.Core.Controller
 
         public override object CreateController(ControllerContext context)
         {
-            var controllerType = default(Type);
+            return base.CreateController(context);
+            //var controllerType = default(Type);
             
-            var shellContext = context.HttpContext.Features.Get<ShellContext>();
+            //var shellContext = context.HttpContext.Features.Get<ShellContext>();
 
-            foreach (var routeProvider in _routeProviders)
-            {
-                controllerType = routeProvider.GetRouteMapperType(context.RouteData);
-                if (controllerType != null)
-                    break;
-            }
+            //foreach (var routeProvider in _routeProviders)
+            //{
+            //    controllerType = routeProvider.GetRouteMapperType(context.RouteData);
+            //    if (controllerType != null)
+            //        break;
+            //}
             
-            if (controllerType == null || !_serviceCollection.Contians(controllerType))
-               return base.CreateController(context);
+            //if (controllerType == null || !_serviceCollection.Contians(controllerType))
+            //   return base.CreateController(context);
              
-            return shellContext.ServiceProvider.GetService(controllerType);
+            //return shellContext.ServiceProvider.GetService(controllerType);
         }
 
 
