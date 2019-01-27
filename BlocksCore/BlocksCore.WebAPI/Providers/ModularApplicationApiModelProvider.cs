@@ -1,26 +1,50 @@
+using System.Collections.Generic;
 using System.Linq;
+using BlocksCore.Mvc.Core.Route;
 using BlocksCore.WebAPI.Controllers;
+using BlocksCore.WebAPI.Controllers.Manager;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
 namespace BlocksCore.WebAPI.Providers
 {
     public class ModularApplicationApiModelProvider : IApplicationModelProvider
     {
+        private readonly MvcControllerManager _mvcControllerManager;
+
+        public ModularApplicationApiModelProvider(MvcControllerManager mvcControllerManager)
+        {
+
+            this._mvcControllerManager = mvcControllerManager;
+        }
+
         public void OnProvidersExecuting(ApplicationModelProviderContext context)
         {
-            context.Result.Controllers.Where(c => c.ControllerType == typeof(ApiController));
+            var allApiServices = _mvcControllerManager.GetAll();
+            foreach (var controllerModel in context.Result.Controllers)
+            {
+
+                var apiService = allApiServices.FirstOrDefault(s => s.ServiceInterfaceType == controllerModel.ControllerType);
+                if (apiService != null)
+                {
+                    if (controllerModel.RouteValues.ContainsKey("area"))
+                        controllerModel.RouteValues["area"] = apiService.ServicePrefix;
+                    else
+                    {
+                        controllerModel.RouteValues.Add("area",apiService.ServicePrefix);
+                    }
+                    
+                }
+
+            }
         }
 
         public void OnProvidersExecuted(ApplicationModelProviderContext context)
         {
-            throw new System.NotImplementedException();
         }
 
-        public int Order {
-            get
-            {
-              return  1000 + 100;
-            }
+        public int Order
+        {
+            get { return 1000 + 100; }
         }
     }
 }

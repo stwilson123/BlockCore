@@ -73,7 +73,14 @@ namespace BlocksCore.Mvc.Core
                     else
                     {
                         // Add an "area" route value equal to the module id.
-                        controller.RouteValues.Add("area", blueprint.Extension.Id);
+                        if (controller.RouteValues.ContainsKey("area"))
+                        {
+                            controller.RouteValues["area"] = blueprint.Extension.Id;
+                        }
+                        else
+                        {
+                            controller.RouteValues.Add("area", blueprint.Extension.Id);
+                        }
                     }
                 }
                 else
