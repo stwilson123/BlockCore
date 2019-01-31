@@ -9,7 +9,7 @@ namespace BlocksCore.Abstractions
 
         public static string GetAreaKey(AreaOption areaOption)
         {
-            return string.Format(Area, areaOption.FunctionType, areaOption.AreaName);
+            return string.Format(Area, areaOption.AreaName,areaOption.FunctionType);
         }
 
 
