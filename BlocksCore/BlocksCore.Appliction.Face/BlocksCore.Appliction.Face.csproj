@@ -13,6 +13,7 @@
       <ProjectReference Include="..\..\Modules\BlocksCore.EntryPoint\BlocksCore.EntryPoint.csproj" />
       <ProjectReference Include="..\..\Modules\BlocksCore.Localization\BlocksCore.Localization.csproj" />
       <ProjectReference Include="..\..\Modules\BlocksCore.Resources\BlocksCore.Resources.csproj" />
+      <ProjectReference Include="..\BlocksCore.Data\BlocksCore.Data.csproj" />
       <ProjectReference Include="..\BlocksCore.ResourcesManagement\BlocksCore.ResourcesManagement.csproj" />
       <ProjectReference Include="..\BlocksCore.WebAPI\BlocksCore.WebAPI.csproj" />
     </ItemGroup>
