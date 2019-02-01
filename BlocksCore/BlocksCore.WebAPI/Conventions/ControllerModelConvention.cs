@@ -15,14 +15,16 @@ namespace BlocksCore.WebAPI
         {
             var controllerInfo = _mvcControllerManager.GetAll()
                 .FirstOrDefault(c => c.ServiceInterfaceType == controller.ControllerType);
-            //var attrs = controllerInfo.ServiceInterfaceType.GetCustomAttributes(false);
+            if (controllerInfo == null)
+                return;
+            var controllerAttrs = controllerInfo.ServiceInterfaceType.GetCustomAttributes(false);
            
 
-//            if (controllerAttrs.Any())
-//            {
-//                controller.Selectors.Clear();
-//                ModelConventionHelper.AddRange(controller.Selectors, ModelConventionHelper.CreateSelectors(controllerAttrs));
-//            }
+            if (controllerAttrs.Any())
+            {
+                controller.Selectors.Clear();
+                ConventionHelper.AddRange(controller.Selectors, ConventionHelper.CreateSelectors(controllerAttrs));
+            }
         }
     }
 }

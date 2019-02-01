@@ -39,7 +39,7 @@ namespace BlocksCore.WebAPI.Providers
             return activeFeatures.Select(f =>
             {
                 var areaName = AreaTemplate.GetAreaKey(new AreaOption() {
-                    AreaName = _extensionManager.GetFeatures(new string[] { f.Id }).FirstOrDefault()?.Name, FunctionType = "api" });
+                    AreaName = f.Id, FunctionType = "api" });
                 return new RouteDescriptor
                 {
                     Name = areaName + "Route",

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Localization;
 
 namespace BlocksCore.Admin.Controllers
 {
+    
     public class AdminController : Controller
     {
         private IStringLocalizer T;
@@ -13,7 +14,9 @@ namespace BlocksCore.Admin.Controllers
         public AdminController(IStringLocalizer<AdminController> t)
         {
             this.T = t;
-        }        
+        }    
+        
+        [HttpPost]
         public ActionResult Index()
         {
             

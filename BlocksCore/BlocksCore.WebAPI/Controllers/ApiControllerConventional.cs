@@ -42,7 +42,7 @@ namespace BlocksCore.WebAPI.Controllers
             var features = _extensionManager.LoadFeaturesAsync().Result;
             foreach (var feature in features)
             {
-                _mvcControllerBuilderFactory.ForAll<IAppService>( AreaTemplate.GetAreaKey(new AreaOption() { AreaName = feature.FeatureInfo.Name,
+                _mvcControllerBuilderFactory.ForAll<IAppService>( AreaTemplate.GetAreaKey(new AreaOption() { AreaName = feature.FeatureInfo.Id,
                      FunctionType = "api"
                 }),feature.ExportedTypes.Where(IsController)).Build();
             }

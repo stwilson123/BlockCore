@@ -65,8 +65,8 @@ namespace BlocksCore.WebAPI
             services.AddMvcCore(opt =>
                 {
                     opt.Conventions.Add(new ControllerModelConvention(defaultMvcControllerManager));
-                    opt.Conventions.Add(new BlocksCore.WebAPI.ActionModelConvention());
-                    //opt.Conventions.Add(new ParameterModelConvention(typeof(ITestService)));
+                    opt.Conventions.Add(new BlocksCore.WebAPI.ActionModelConvention(defaultMvcControllerManager));
+                    opt.Conventions.Add(new ParameterModelConvention());
                 })
                 .ConfigureApplicationPartManager(manager =>
                 {
