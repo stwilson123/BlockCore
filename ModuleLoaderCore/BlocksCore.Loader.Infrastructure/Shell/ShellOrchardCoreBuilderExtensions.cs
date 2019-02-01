@@ -1,5 +1,7 @@
+using BlocksCore.Environment.Shell.Data.Descriptors;
 using BlocksCore.Loader.Abstractions.Modules.Builder;
 using BlocksCore.Loader.Abstractions.Shell;
+using BlocksCore.Loader.Abstractions.Shell.Descriptor;
 using BlocksCore.Loader.Environment.Shell;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -18,7 +20,7 @@ namespace BlocksCore.Loader.Infrastructure.Shell
             builder.AddSitesFolder()
                 .ConfigureServices(services =>
                 {
-                    //services.AddScoped<IShellDescriptorManager, ShellDescriptorManager>();
+                    services.AddScoped<IShellDescriptorManager, ShellDescriptorManager>();
                     //services.AddScoped<IShellStateManager, ShellStateManager>();
                     services.AddScoped<IShellFeaturesManager, ShellFeaturesManager>();
                     services.AddScoped<IShellDescriptorFeaturesManager, ShellDescriptorFeaturesManager>();

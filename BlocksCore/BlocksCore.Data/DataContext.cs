@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using BlocksCore.Data.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace BlocksCore.Data
 
         public IQueryable<T> Query<T>() where T : class
         {
+
             return _dbContext.Query<T>();
         }
 

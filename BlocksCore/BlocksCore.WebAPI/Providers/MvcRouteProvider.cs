@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using BlocksCore.Abstractions;
 using BlocksCore.Abstractions.DependencyInjection;
+using BlocksCore.Loader.Abstractions.Extensions.Features;
 using BlocksCore.Loader.Abstractions.Shell;
 using BlocksCore.Loader.Abstractions.Shell.Models;
 using BlocksCore.Mvc.Core.Conventions;

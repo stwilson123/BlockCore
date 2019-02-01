@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BlocksCore\BlocksCore.Data.Abstractions\BlocksCore.Data.Abstractions.csproj" />
     <ProjectReference Include="..\BlocksCore.Loader.Abstractions\BlocksCore.Loader.Abstractions.csproj" />
     <ProjectReference Include="..\BlocksCore.Loader.Infrastructure.Abstractions\BlocksCore.Loader.Infrastructure.Abstractions.csproj" />
     <ProjectReference Include="..\BlocksCore.Loader\BlocksCore.Loader.csproj" />
