@@ -39,7 +39,7 @@ namespace BlocksCore.Loader.Environment.Shell
 
         public static IServiceCollection AddAllFeaturesDescriptor(this IServiceCollection services)
         {
-            services.AddScoped<IShellDescriptorManager, AllFeaturesShellDescriptorManager>();
+            services.AddScoped<IShellDescriptorManager,     AllFeaturesShellDescriptorManager>();
 
             return services;
         }

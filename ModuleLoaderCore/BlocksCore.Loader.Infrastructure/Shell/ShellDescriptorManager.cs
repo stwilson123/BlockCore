@@ -46,7 +46,7 @@ namespace BlocksCore.Environment.Shell.Data.Descriptors
             // Prevent multiple queries during the same request
             if (_shellDescriptor == null)
             {
-                _shellDescriptor = await _session.Query<ShellDescriptor>().FirstOrDefaultAsync();
+                _shellDescriptor = await _session.Query<ShellDescriptor>((s) => s.Features).FirstOrDefaultAsync();
 
                 if (_shellDescriptor == null)
                 {

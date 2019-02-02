@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.IO;
+using BlocksCore.Data.Shell.EntityTypeConfiguration;
 using BlocksCore.Loader.Abstractions.Shell;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -31,7 +32,7 @@ namespace BlocksCore.Data
 
                     // Disabling query gating as it's failing to improve performance right now
                     //storeConfiguration.DisableQueryGating();
-
+                   
                     switch (shellSettings.DatabaseProvider)
                     {
                         case "SqlConnection":
@@ -65,6 +66,13 @@ namespace BlocksCore.Data
 //                        storeConfiguration.TablePrefix = shellSettings.TablePrefix + "_";
 //                    }
 //                    
+
+        }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            ShellEntityTypeConfiguartionApply.ModelCreating(modelBuilder);
 
         }
     }

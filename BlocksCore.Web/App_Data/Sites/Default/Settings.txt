@@ -1,0 +1,8 @@
+Default:
+  RequestUrlHost: &930692138 ~
+  RequestUrlPrefix: ~
+  DatabaseProvider: SqlConnection
+  TablePrefix: ~
+  ConnectionString: ' Data Source=localhost;Initial Catalog=BlocksCore;User Id=sa;Password=Pass@word1'
+  State: Running
+...

@@ -1,6 +1,9 @@
+using System;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using BlocksCore.Data.Abstractions;
+using BlocksCore.Loader.Abstractions.Modules.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlocksCore.Data
@@ -16,10 +19,16 @@ namespace BlocksCore.Data
         
         
 
-        public IQueryable<T> Query<T>() where T : class
+        public IQueryable<TSource> Query<TSource>(params Expression<Func<TSource, object>>[] includingExpressions) where TSource : class
         {
+            IQueryable<TSource> queryable = _dbContext.Set<TSource>();
 
-            return _dbContext.Query<T>();
+            foreach (var includingExpression in includingExpressions)
+            {
+                queryable = queryable.Include(includingExpression);
+            }
+         
+            return queryable;
         }
 
         public void Save(object obj)

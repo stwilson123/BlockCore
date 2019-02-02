@@ -1,109 +1,110 @@
-//using Microsoft.Extensions.Logging;
-//using BlocksCore.Environment.Shell.State;
-//using System.Linq;
-//using System.Threading.Tasks;
-//using YesSql;
+using BlocksCore.Data.Abstractions;
+using BlocksCore.Loader.Abstractions.Shell;
+using BlocksCore.Loader.Abstractions.Shell.State;
+using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Threading.Tasks;
 
-//namespace BlocksCore.Environment.Shell
-//{
-//    /// <summary>
-//    /// Stores <see cref="ShellState"/> in the database. 
-//    /// </summary>
-//    public class ShellStateManager : IShellStateManager
-//    {
-//        private ShellState _shellState;
-//        private readonly ISession _session;
+namespace BlocksCore.Environment.Shell
+{
+    /// <summary>
+    /// Stores <see cref="ShellState"/> in the database. 
+    /// </summary>
+    public class ShellStateManager : IShellStateManager
+    {
+        private ShellState _shellState;
+        private readonly IDataContext _session;
 
-//        public ShellStateManager(ISession session, ILogger<ShellStateManager> logger)
-//        {
-//            _session = session;
-//            Logger = logger;
-//        }
+        public ShellStateManager(IDataContext session, ILogger<ShellStateManager> logger)
+        {
+            _session = session;
+            Logger = logger;
+        }
 
-//        ILogger Logger { get; set; }
+        ILogger Logger { get; set; }
 
-//        public async Task<ShellState> GetShellStateAsync()
-//        {
-//            if (_shellState != null)
-//            {
-//                return _shellState;
-//            }
+        public async Task<ShellState> GetShellStateAsync()
+        {
+            if (_shellState != null)
+            {
+                return _shellState;
+            }
 
-//            _shellState = await _session.Query<ShellState>().FirstOrDefaultAsync();
+            _shellState = await _session.Query<ShellState>().FirstOrDefaultAsync();
 
-//            if (_shellState == null)
-//            {
-//                _shellState = new ShellState();
-//                UpdateShellState();
-//            }
+            if (_shellState == null)
+            {
+                _shellState = new ShellState();
+                UpdateShellState();
+            }
 
-//            return _shellState;
-//        }
+            return _shellState;
+        }
 
-//        public async Task UpdateEnabledStateAsync(ShellFeatureState featureState, ShellFeatureState.State value)
-//        {
-//            if (Logger.IsEnabled(LogLevel.Debug))
-//            {
-//                Logger.LogDebug("Feature '{FeatureName}' EnableState changed from '{FeatureState}' to '{FeatureState}'",
-//                             featureState.Id, featureState.EnableState, value);
-//            }
+        public async Task UpdateEnabledStateAsync(ShellFeatureState featureState, ShellFeatureState.State value)
+        {
+            if (Logger.IsEnabled(LogLevel.Debug))
+            {
+                Logger.LogDebug("Feature '{FeatureName}' EnableState changed from '{FeatureState}' to '{FeatureState}'",
+                             featureState.Id, featureState.EnableState, value);
+            }
 
-//            var previousFeatureState = await GetOrCreateFeatureStateAsync(featureState.Id);
-//            if (previousFeatureState.EnableState != featureState.EnableState)
-//            {
-//                if (Logger.IsEnabled(LogLevel.Warning))
-//                {
-//                    Logger.LogWarning("Feature '{FeatureName}' prior EnableState was '{FeatureState}' when '{FeatureState}' was expected",
-//                               featureState.Id, previousFeatureState.EnableState, featureState.EnableState);
-//                }
-//            }
+            var previousFeatureState = await GetOrCreateFeatureStateAsync(featureState.Id);
+            if (previousFeatureState.EnableState != featureState.EnableState)
+            {
+                if (Logger.IsEnabled(LogLevel.Warning))
+                {
+                    Logger.LogWarning("Feature '{FeatureName}' prior EnableState was '{FeatureState}' when '{FeatureState}' was expected",
+                               featureState.Id, previousFeatureState.EnableState, featureState.EnableState);
+                }
+            }
 
-//            previousFeatureState.EnableState = value;
-//            featureState.EnableState = value;
+            previousFeatureState.EnableState = value;
+            featureState.EnableState = value;
 
-//            UpdateShellState();
-//        }
+            UpdateShellState();
+        }
 
-//        public async Task UpdateInstalledStateAsync(ShellFeatureState featureState, ShellFeatureState.State value)
-//        {
-//            if (Logger.IsEnabled(LogLevel.Debug))
-//            {
-//                Logger.LogDebug("Feature '{FeatureName}' InstallState changed from '{FeatureState}' to '{FeatureState}'", featureState.Id, featureState.InstallState, value);
-//            }
+        public async Task UpdateInstalledStateAsync(ShellFeatureState featureState, ShellFeatureState.State value)
+        {
+            if (Logger.IsEnabled(LogLevel.Debug))
+            {
+                Logger.LogDebug("Feature '{FeatureName}' InstallState changed from '{FeatureState}' to '{FeatureState}'", featureState.Id, featureState.InstallState, value);
+            }
 
-//            var previousFeatureState = await GetOrCreateFeatureStateAsync(featureState.Id);
-//            if (previousFeatureState.InstallState != featureState.InstallState)
-//            {
-//                if (Logger.IsEnabled(LogLevel.Warning))
-//                {
-//                    Logger.LogWarning("Feature '{FeatureName}' prior InstallState was '{FeatureState}' when '{FeatureState}' was expected",
-//                               featureState.Id, previousFeatureState.InstallState, featureState.InstallState);
-//                }
-//            }
+            var previousFeatureState = await GetOrCreateFeatureStateAsync(featureState.Id);
+            if (previousFeatureState.InstallState != featureState.InstallState)
+            {
+                if (Logger.IsEnabled(LogLevel.Warning))
+                {
+                    Logger.LogWarning("Feature '{FeatureName}' prior InstallState was '{FeatureState}' when '{FeatureState}' was expected",
+                               featureState.Id, previousFeatureState.InstallState, featureState.InstallState);
+                }
+            }
 
-//            previousFeatureState.InstallState = value;
-//            featureState.InstallState = value;
+            previousFeatureState.InstallState = value;
+            featureState.InstallState = value;
 
-//            UpdateShellState();
-//        }
+            UpdateShellState();
+        }
 
-//        private async Task<ShellFeatureState> GetOrCreateFeatureStateAsync(string id)
-//        {
-//            var shellState = await GetShellStateAsync();
-//            var featureState = shellState.Features.FirstOrDefault(x => x.Id == id);
+        private async Task<ShellFeatureState> GetOrCreateFeatureStateAsync(string id)
+        {
+            var shellState = await GetShellStateAsync();
+            var featureState = shellState.Features.FirstOrDefault(x => x.Id == id);
 
-//            if (featureState == null)
-//            {
-//                featureState = new ShellFeatureState() { Id = id };
-//                _shellState.Features.Add(featureState);
-//            }
+            if (featureState == null)
+            {
+                featureState = new ShellFeatureState() { Id = id };
+                _shellState.Features.Add(featureState);
+            }
 
-//            return featureState;
-//        }
+            return featureState;
+        }
 
-//        private void UpdateShellState()
-//        {
-//            _session.Save(_shellState);
-//        }
-//    }
-//}
+        private void UpdateShellState()
+        {
+            _session.Save(_shellState);
+        }
+    }
+}

@@ -10,6 +10,8 @@ namespace BlocksCore.Data.Abstractions
 
             return Task.Factory.StartNew(() => queryable.FirstOrDefault());
         }
-        
+
+
+   
     }
 }

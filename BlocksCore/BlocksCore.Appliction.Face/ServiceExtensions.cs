@@ -3,6 +3,7 @@ using BlocksCore.Data;
 using BlocksCore.Loader.Abstractions.Modules.Builder;
 using BlocksCore.Loader.DeferredTasks;
 using BlocksCore.Loader.Infrastructure.Cache;
+using BlocksCore.Loader.Infrastructure.Shell;
 using BlocksCore.Loader.Modules.Extensions;
 using BlocksCore.Mvc.Core.Extensions;
 using BlocksCore.ResourcesManagement;
@@ -37,7 +38,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 //.AddSetupFeatures("OrchardCore.Setup")
 
                 .AddDataAccess()
-                //.AddDataStorage()
+               .AddDataStorage()
                 .AddBackgroundService()
                 .AddDeferredTasks()
 

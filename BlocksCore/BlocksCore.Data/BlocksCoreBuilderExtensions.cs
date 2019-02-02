@@ -26,7 +26,7 @@ namespace BlocksCore.Data
                 services.TryAddDataProvider(name: "Postgres", value: "Postgres", hasConnectionString: true,
                     hasTablePrefix: true, isDefault: false);
 
-                services.AddDbContext<BlocksCoreDbContext>();
+                services.AddDbContext<DbContext,BlocksCoreDbContext>();
 
 
                 services.AddScoped<IDataContext,DataContext>();
